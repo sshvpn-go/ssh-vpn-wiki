@@ -1,0 +1,6 @@
+# Redirect users preferring Chinese to the generated zh root
+/ /zh/ 302 Language=zh-cn,zh-tw,zh-hk,zh-sg,zh
+/ /zh/ 302 Country=CN,TW,HK,MO,SG
+
+# Default fallback
+/ / 200

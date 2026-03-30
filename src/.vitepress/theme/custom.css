@@ -1,0 +1,243 @@
+:root {
+  --vp-c-brand-1: #41d1ff;
+  --vp-c-brand-2: #bd34fe;
+  --vp-c-brand-3: #8a2be2;
+  --vp-c-brand-soft: rgba(65, 209, 255, 0.16);
+}
+
+.VPButton.brand {
+  border-color: var(--vp-button-brand-border);
+  color: var(--vp-button-brand-text);
+  background: linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+}
+
+.VPButton.brand:hover {
+  background: linear-gradient(120deg, var(--vp-c-brand-2), var(--vp-c-brand-1));
+}
+
+/* Premium Device Presentation Styles */
+.visual-showcase {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.device-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .device-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.device-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.device-container:hover {
+  transform: scale(1.03);
+}
+
+.device-pc {
+  width: 100%;
+  max-width: 600px;
+  border: 4px solid #2a2a2a;
+}
+
+.device-mobile {
+  width: 100%;
+  max-width: 200px;
+  border: 6px solid #1a1a1a;
+  border-radius: 36px;
+}
+
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, var(--vp-c-brand-soft) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* ── Pricing page ────────────────────────────────────────────────────
+   Using robust ID selector to beat VitePress defaults during SPA navigation. */
+
+/* Break out of VitePress's narrow content max-width so 3 cards fit */
+#sshvpn-pricing {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+  width: 100%;
+  max-width: none !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  #sshvpn-pricing {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  #sshvpn-pricing {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reset VitePress .vp-doc defaults on all divs inside pricing */
+#sshvpn-pricing div {
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: inherit;
+}
+
+#sshvpn-pricing .pricing-card {
+  padding: 1rem !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  border-radius: 16px !important;
+  background: var(--vp-c-bg-soft) !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+#sshvpn-pricing .pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+#sshvpn-pricing .pricing-card.featured {
+  border: 2px solid var(--vp-c-brand-1) !important;
+  background: linear-gradient(135deg,
+      var(--vp-c-bg-soft) 0%,
+      rgba(65, 209, 255, 0.05) 100%) !important;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+@media (max-width: 960px) {
+  #sshvpn-pricing .pricing-card.featured {
+    transform: none;
+  }
+}
+
+#sshvpn-pricing .plan-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--vp-c-brand-1);
+  color: #000;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+#sshvpn-pricing .plan-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#sshvpn-pricing .plan-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 0.5rem;
+}
+
+#sshvpn-pricing .plan-price .unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+}
+
+#sshvpn-pricing .plan-tag {
+  font-size: 0.875rem;
+  color: #10b981;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#sshvpn-pricing .plan-desc {
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+#sshvpn-pricing ul.plan-features {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  flex-grow: 1;
+  gap: 0rem
+}
+
+#sshvpn-pricing .plan-features li {
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem 0 !important;
+  padding: 0 0 0 1.5rem !important;
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#sshvpn-pricing .plan-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--vp-c-brand-1);
+  font-weight: bold;
+}
+
+#sshvpn-pricing .plan-features li p {
+  margin: 0 !important;
+}
+
+#sshvpn-pricing .plan-button {
+  text-align: center;
+  padding: 0.75rem !important;
+  border: 1px solid var(--vp-c-brand-1) !important;
+  border-radius: 8px !important;
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+#sshvpn-pricing .plan-button:hover {
+  background: var(--vp-c-brand-1);
+  color: #000;
+}
+
+#sshvpn-pricing .plan-button.featured {
+  background: var(--vp-c-brand-1) !important;
+  color: #000 !important;
+}
+
+#sshvpn-pricing .plan-button.featured:hover {
+  filter: brightness(1.1);
+}
