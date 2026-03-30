@@ -1,34 +1,34 @@
 # 服务端部署与使用指南
 
-SSHVPN 的最大优势在于其**无感精简的部署逻辑**。相比起需要配置复杂证书的 OpenVPN 或 WireGuard，SSHVPN 的服务端完全依赖于成熟安全的 SSH 协议底座。
+ssh-vpn 的最大优势在于其**无感精简的部署逻辑**。相比起需要配置复杂证书的 OpenVPN 或 WireGuard，ssh-vpn 的服务端完全依赖于成熟安全的 SSH 协议底座。
 
 我们为您提供两种开箱即用的服务端部署模式以满足不同场景：
 
 ---
 
-## 模式 A：使用内置 `vpn-go-server`（专为轻量级/嵌入式设备打造）
+## 模式 A：使用内置 `ssh-vpn-server`（专为轻量级/嵌入式设备打造）
 
 这是官方提供的独立服务端二进制程序，零外部依赖，极速拉起。
 
 ### 🌟 模式亮点：
 - **极致轻量**：优化内存占用，不仅支持标准 Linux VPS，更**能完美运行在 OpenWrt 路由器等资源受限设备（甚至 64MB 内存的设备）**上。
-- **纯粹的高安全性**：`vpn-go-server` 仅实现了最基础的 `tcpchannel`（端口转发协议层）。它从根本上**不支持建立任何可交互的 Shell 终端会话 (No Shell Access)**。这意味着即使该端口被探测，攻击者也绝无可能借此获取主机的服务器控制权，最大程度隔绝了入侵风险。
+- **纯粹的高安全性**：`ssh-vpn-server` 仅实现了最基础的 `tcpchannel`（端口转发协议层）。它从根本上**不支持建立任何可交互的 Shell 终端会话 (No Shell Access)**。这意味着即使该端口被探测，攻击者也绝无可能借此获取主机的服务器控制权，最大程度隔绝了入侵风险。
 
 ### 部署步骤
 
 1. **准备主机密钥**：作为安全标识，若无现成密钥，可运行此命令生成一份 RSA 密钥对：
    ```bash
-   ssh-keygen -t rsa -f /etc/sshvpn/host_rsa_key
+   ssh-keygen -t rsa -f /etc/ssh-vpn/host_rsa_key
    ```
 2. **启动守护进程**：下载对应架构（如 `aarch64` / `x86_64`）的二进制文件并挂载：
    ```bash
-   vpn-go-server -hostkey /etc/sshvpn/host_rsa_key -port 2222
+   ssh-vpn-server -hostkey /etc/ssh-vpn/host_rsa_key -port 2222
    ```
 3. **添加授权用户**：通过内置的 CLI 用户管理器安全添加账号，无需手动编辑文本配置：
    ```bash
-   vpn-go-server user -add "my_user" -password "secure_pass_123"
+   ssh-vpn-server user -add "my_user" -password "secure_pass_123"
    # 查看当前注册的用户
-   vpn-go-server user -list
+   ssh-vpn-server user -list
    ```
 
 ### 注册为系统的后台守护进程 (进阶选项)
@@ -38,18 +38,18 @@ SSHVPN 的最大优势在于其**无感精简的部署逻辑**。相比起需要
 ```bash
 # （可选操作）导出调优环境变量，告知服务限制自身的内存与并发管道数
 export GOMEMLIMIT=30MiB
-export VPNGO_SSHD_MAX_DIRECT_GLOBAL=512
+export SSHVPN_SSHD_MAX_DIRECT_GLOBAL=512
 
 # 敲下这条指令后，上述环境变量将被自动烙印进系统的启动配置（如 Systemd）里！
-vpn-go-server service install
-vpn-go-server service start
+ssh-vpn-server service install
+ssh-vpn-server service start
 ```
 
 ---
 
 ## 模式 B：使用系统原生的 OpenSSH (推荐生产环境重负载使用)
 
-由于 SSHVPN 底层完全遵循标准 SSH 规范，如果您已经拥有一台 Linux 云服务器，**甚至不需要运行额外的 `vpn-go-server` 进程！** 直接将系统自带的 `OpenSSH` 作为数据隧道服务端，性能最强也最通用。
+由于 ssh-vpn 底层完全遵循标准 SSH 规范，如果您已经拥有一台 Linux 云服务器，**甚至不需要运行额外的 `ssh-vpn-server` 进程！** 直接将系统自带的 `OpenSSH` 作为数据隧道服务端，性能最强也最通用。
 
 ### ⚡ 全自动检测与配置脚本 (最简体验)
 对于绝大部分基于 Debian / Ubuntu / CentOS 的云服务器，我们提供了一个全自动配置脚本。您可以直接将下方代码复制并在服务器上运行：
@@ -59,7 +59,7 @@ vpn-go-server service start
 
 ```bash
 #!/bin/bash
-# VPN-GO server setup script
+# ssh-vpn server setup script
 # SSH config check, apply config, add VPN user, add authorized keys
 # Run as root or with sudo on the server
 
@@ -168,7 +168,7 @@ ensure_sshd_vpn_config() {
         if [[ -x "$FORCE_CMD" ]]; then
             cat >> "$SSHD_CONFIG" << EOF
 
-# VPN-GO: forwarding only, no shell login
+# ssh-vpn: forwarding only, no shell login
 Match User $VPN_USER
     AllowTcpForwarding yes
     ForceCommand $FORCE_CMD
@@ -179,7 +179,7 @@ EOF
             FORCE_CMD="/bin/false"
             cat >> "$SSHD_CONFIG" << EOF
 
-# VPN-GO: forwarding only, no shell login
+# ssh-vpn: forwarding only, no shell login
 Match User $VPN_USER
     AllowTcpForwarding yes
     ForceCommand $FORCE_CMD
@@ -368,7 +368,7 @@ cmd_gen_key() {
     if [[ -z "$email" ]]; then
         red "Usage: $0 gen-key <email> [algorithm]"
         echo ""
-        echo "Generates SSH key pair for VPN-GO. Run on your local machine."
+        echo "Generates SSH key pair for ssh-vpn. Run on your local machine."
         echo ""
         echo "Arguments:"
         echo "  email      Required. Used as comment in the public key."
@@ -460,7 +460,7 @@ cmd_all() {
 }
 
 usage() {
-    echo "VPN-GO server setup script"
+    echo "ssh-vpn server setup script"
     echo ""
     echo "Usage: $0 <command> [args]"
     echo ""

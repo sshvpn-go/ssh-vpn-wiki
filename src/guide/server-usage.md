@@ -1,53 +1,53 @@
 # Server Deployment Guide
 
-SSHVPN takes pride in requiring **minimal to no complicated infrastructure configurations**, a striking contrast to heavyweight protocols like OpenVPN or WireGuard. 
+ssh-vpn takes pride in requiring **minimal to no complicated infrastructure configurations**, a striking contrast to heavyweight protocols like OpenVPN or WireGuard. 
 
-Because SSHVPN inherently leverages the mature SSH protocol, we offer two out-of-the-box deployment solutions depending on your infrastructure.
+Because ssh-vpn inherently leverages the mature SSH protocol, we offer two out-of-the-box deployment solutions depending on your infrastructure.
 
 ---
 
-## Method A: The Built-in `vpn-go-server` (For Lightweight/Embedded Devices)
+## Method A: The Built-in `ssh-vpn-server` (For Lightweight/Embedded Devices)
 
 This is the official standalone server daemon natively bundled with the project.
 
 ### 🌟 Key Advantages:
 - **Ultra-Lightweight & Optimized**: Engineered to consume microscopic amounts of memory, this daemon thrives on standard Linux VPSs but also runs flawlessly on deeply constrained embedded devices—even **OpenWrt routers with 64-128MB RAM**.
-- **Hardened Security Pipeline**: Unlike standard SSH packages, `vpn-go-server` intentionally *exclusively* implements the `tcpchannel` protocol and strictly disables any interactive shell access. Even if an attacker uncovers its identity, they cannot acquire OS terminal commands, nullifying the risk of server takeover completely.
+- **Hardened Security Pipeline**: Unlike standard SSH packages, `ssh-vpn-server` intentionally *exclusively* implements the `tcpchannel` protocol and strictly disables any interactive shell access. Even if an attacker uncovers its identity, they cannot acquire OS terminal commands, nullifying the risk of server takeover completely.
 
 ### Quick Start Deployment
 
 1. **Prepare Host Keys**: Identity is paramount for encrypted handshakes. Generate fresh RSA keys for your VPN host:
    ```bash
-   ssh-keygen -t rsa -f /etc/sshvpn/host_rsa_key
+   ssh-keygen -t rsa -f /etc/ssh-vpn/host_rsa_key
    ```
 2. **Launch the Daemon**: Download the exact binary for your architecture from GitHub and mount it onto an open port:
    ```bash
-   vpn-go-server -hostkey /etc/sshvpn/host_rsa_key -port 2222
+   ssh-vpn-server -hostkey /etc/ssh-vpn/host_rsa_key -port 2222
    ```
 3. **Manage VPN Users**: Add new authenticated users securely via the CLI without flat-file chaos:
    ```bash
-   vpn-go-server user -add "my_user" -password "secure_pass_123"
+   ssh-vpn-server user -add "my_user" -password "secure_pass_123"
    ```
 
 ### Registering as a System Service (Optional)
 
-Instead of manually keeping the server alive, `vpn-go-server` can officially register itself as a reliable background service running at startup.
+Instead of manually keeping the server alive, `ssh-vpn-server` can officially register itself as a reliable background service running at startup.
 
 ```bash
 # Optional: Set up memory constraints and SSH connection resilience limits
 export GOMEMLIMIT=30MiB
-export VPNGO_SSHD_MAX_DIRECT_GLOBAL=512
+export SSHVPN_SSHD_MAX_DIRECT_GLOBAL=512
 
 # Trigger the install. It automatically bundles the above variables into Systemd!
-vpn-go-server service install
-vpn-go-server service start
+ssh-vpn-server service install
+ssh-vpn-server service start
 ```
 
 ---
 
 ## Method B: Native OpenSSH (Recommended for Heavy Production Workloads)
 
-Because SSHVPN fundamentally drives standardized SSH, **you don't actually need to install our proprietary tracking daemon!** If you already hold a robustly configured Linux instance with standard `OpenSSH`, that alone fulfills the role of the master VPN tunnel node.
+Because ssh-vpn fundamentally drives standardized SSH, **you don't actually need to install our proprietary tracking daemon!** If you already hold a robustly configured Linux instance with standard `OpenSSH`, that alone fulfills the role of the master VPN tunnel node.
 
 ### ⚡ Automated Setup Script (The Easy Way)
 For convenience, we provide an automated configuration script for Debian, Ubuntu, and CentOS. You can directly copy the code below and run it on your server:
@@ -57,7 +57,7 @@ For convenience, we provide an automated configuration script for Debian, Ubuntu
 
 ```bash
 #!/bin/bash
-# VPN-GO server setup script
+# ssh-vpn server setup script
 # SSH config check, apply config, add VPN user, add authorized keys
 # Run as root or with sudo on the server
 
@@ -166,7 +166,7 @@ ensure_sshd_vpn_config() {
         if [[ -x "$FORCE_CMD" ]]; then
             cat >> "$SSHD_CONFIG" << EOF
 
-# VPN-GO: forwarding only, no shell login
+# ssh-vpn: forwarding only, no shell login
 Match User $VPN_USER
     AllowTcpForwarding yes
     ForceCommand $FORCE_CMD
@@ -177,7 +177,7 @@ EOF
             FORCE_CMD="/bin/false"
             cat >> "$SSHD_CONFIG" << EOF
 
-# VPN-GO: forwarding only, no shell login
+# ssh-vpn: forwarding only, no shell login
 Match User $VPN_USER
     AllowTcpForwarding yes
     ForceCommand $FORCE_CMD
@@ -366,7 +366,7 @@ cmd_gen_key() {
     if [[ -z "$email" ]]; then
         red "Usage: $0 gen-key <email> [algorithm]"
         echo ""
-        echo "Generates SSH key pair for VPN-GO. Run on your local machine."
+        echo "Generates SSH key pair for ssh-vpn. Run on your local machine."
         echo ""
         echo "Arguments:"
         echo "  email      Required. Used as comment in the public key."
@@ -458,7 +458,7 @@ cmd_all() {
 }
 
 usage() {
-    echo "VPN-GO server setup script"
+    echo "ssh-vpn server setup script"
     echo ""
     echo "Usage: $0 <command> [args]"
     echo ""

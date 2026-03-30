@@ -1,6 +1,6 @@
 ## Context
 
-The `vpn-go` project requires a public-facing website (code-named "sshvpn") to serve both as a product landing page and a comprehensive documentation portal. Currently, there is a lack of centralized documentation and promotional material, making user onboarding and product discovery difficult. The new site will reside in the `vpn-go-wiki/src` directory. It must be modern, fast, SEO-friendly, and support multi-language (English and Chinese).
+The `ssh-vpn` project requires a public-facing website (code-named "ssh-vpn") to serve both as a product landing page and a comprehensive documentation portal. Currently, there is a lack of centralized documentation and promotional material, making user onboarding and product discovery difficult. The new site will reside in the `ssh-vpn-wiki/src` directory. It must be modern, fast, SEO-friendly, and support multi-language (English and Chinese).
 
 ## Goals / Non-Goals
 
@@ -37,4 +37,4 @@ The `vpn-go` project requires a public-facing website (code-named "sshvpn") to s
 
 ## Open Questions
 - Where will the site ultimately be hosted? This impacts how the specific GEO routing (Edge Middleware) is configured.
-- Do we already have finalized branding assets (logo, product screenshots) for "sshvpn"?
+- Do we already have finalized branding assets (logo, product screenshots) for "ssh-vpn"?

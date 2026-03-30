@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "SSHVPN"
+  name: "ssh-vpn"
   text: "基于标准 SSH 协议的现代、快速且安全的下一代 VPN"
   tagline: 跨越防火墙、全面保护您的连接，让极客与普通小白都能享受安全自由的网络体验。
   image:
     src: /logo.png
-    alt: SSHVPN Logo
+    alt: ssh-vpn Logo
   actions:
     - theme: brand
       text: 快速开始
@@ -17,7 +17,7 @@ hero:
       link: /zh/download
     - theme: alt
       text: 前往 GitHub
-      link: https://github.com/vpn-go/vpn-go
+      link: https://github.com/ssh-vpn/ssh-vpn
 
 features:
   - title: 卓越的安全性
@@ -44,16 +44,16 @@ features:
 
 ## 🖥️ 视觉体验 (Cross-Platform Experience)
 
-无论是在 4K 桌面显示的宽广视野，还是在手机屏幕上的便捷操作，SSHVPN 都能为您提供一致且流畅的交互体验。
+无论是在 4K 桌面显示的宽广视野，还是在手机屏幕上的便捷操作，ssh-vpn 都能为您提供一致且流畅的交互体验。
 
 <div class="device-row">
   <div class="device-container device-pc">
     <div class="glow-effect"></div>
-    <img src="../public/images/pc/home.jpg" alt="SSHVPN Desktop Home">
+    <img src="../public/images/pc/home.jpg" alt="ssh-vpn Desktop Home">
   </div>
   <div class="device-container device-mobile">
     <div class="glow-effect"></div>
-    <img src="../public/images/mobile/home.jpg" alt="SSHVPN Mobile Home">
+    <img src="../public/images/mobile/home.jpg" alt="ssh-vpn Mobile Home">
   </div>
 </div>
 
@@ -65,7 +65,7 @@ features:
 
 ## 👥 目标人群
 
-无论您是技术专家还是网络安全关注者，SSHVPN 都能完美适配您的需求：
+无论您是技术专家还是网络安全关注者，ssh-vpn 都能完美适配您的需求：
 
 - **AI 开发者与研究者**：搭配龙虾（OpenClaw）服务器，稳定访问 ChatGPT、Claude、Gemini 等全球顶级 AI 平台。
 - **跨国协作团队**：大幅加速海外代码拉取（GitHub/GitLab）速度，流畅管理远程生产服务器。
@@ -81,13 +81,13 @@ features:
 ## 🎯 应用场景
 
 ### 🤖 极致的 AI 辅助开发
-直接在 VPN-GO 中填入您的龙虾服务器凭证。无论是 TUN 全流量模式还是 SOCKS5 代理模式，都能让您的本地开发环境瞬间获得全球顶尖 AI 模型的力量。
+直接在 ssh-vpn 中填入您的龙虾服务器凭证。无论是 TUN 全流量模式还是 SOCKS5 代理模式，都能让您的本地开发环境瞬间获得全球顶尖 AI 模型的力量。
 
 ### 💻 高效的远程办公与运维
-通过 SSHVPN 建立的加密隧道，您可以像在局域网内一样安全地访问公司内部系统、数据库和测试机。其轻量化的特性，即使在网络抖动的移动办公场景下也能保持连接不断连。
+通过 ssh-vpn 建立的加密隧道，您可以像在局域网内一样安全地访问公司内部系统、数据库和测试机。其轻量化的特性，即使在网络抖动的移动办公场景下也能保持连接不断连。
 
 ### 🛡️ 公共网络下的安全堡垒
-SSHVPN 将您的所有流量包裹在成熟的 SSH 协议中。在不安全的网络环境下，它是您抵御中间人攻击（MITM）和数据泄露的最坚实盾牌。
+ssh-vpn 将您的所有流量包裹在成熟的 SSH 协议中。在不安全的网络环境下，它是您抵御中间人攻击（MITM）和数据泄露的最坚实盾牌。
 
 </div>
 

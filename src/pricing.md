@@ -5,9 +5,9 @@ aside: false
 
 # Pricing & Subscriptions
 
-While SSHVPN remains 100% open-source for self-hosting, we offer the following subscription plans to support ongoing development and unlock premium features.
+While ssh-vpn remains 100% open-source for self-hosting, we offer the following subscription plans to support ongoing development and unlock premium features.
 
-<div id="sshvpn-pricing" class="pricing-container">
+<div id="ssh-vpn-pricing" class="pricing-container">
   <!-- Monthly Plan -->
   <div class="pricing-card">
     <div class="plan-name">Monthly</div>
@@ -56,7 +56,7 @@ While SSHVPN remains 100% open-source for self-hosting, we offer the following s
 ---
 
 ## Open-Source (Self-Hosted)
-If you have your own infrastructure and enjoy tinkering, SSHVPN is still free:
+If you have your own infrastructure and enjoy tinkering, ssh-vpn is still free:
 - **Core Engine**: 100% Free & Open-Source
 - **Deployment**: Follow the **[Server Guide](/guide/server-usage)** to host it yourself.
 - **Support**: Get help through GitHub Discussions.

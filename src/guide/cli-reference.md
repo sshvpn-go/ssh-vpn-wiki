@@ -1,6 +1,6 @@
 # Command-Line Interface (CLI) Reference
 
-The `vpn-go-cli` executable serves as both the VPN client daemon and the built-in server daemon. It offers powerful subcommands for controlling connections without a graphical interface.
+The `ssh-vpn-cli` executable serves as both the VPN client daemon and the built-in server daemon. It offers powerful subcommands for controlling connections without a graphical interface.
 
 ## Global Flags
 
@@ -8,7 +8,7 @@ These flags can be applied before any subcommand.
 
 | Flag | Description | Default |
 |---|---|---|
-| `-config-dir` | Directory containing `profile.json` and keys. | `~/.vpn-go` |
+| `-config-dir` | Directory containing `profile.json` and keys. | `~/.ssh-vpn` |
 | `-profile` | Name of the specific VPN profile to activate. | *(Active Profile)* |
 | `-v` | Show version information and exit. | |
 
@@ -18,7 +18,7 @@ These flags can be applied before any subcommand.
 Starts the VPN connection based on your profile, intercepting local traffic via SOCKS5 or a virtual TUN interface.
 
 ```bash
-vpn-go-cli [global-flags] client [flags]
+ssh-vpn-cli [global-flags] client [flags]
 ```
 
 ### Client Flags
@@ -33,14 +33,14 @@ These override exactly what's written inside your `profile.json` for one-off ses
 
 ### Examples
 ```bash
-# Basic run utilizing saved configuration in ~/.vpn-go/profile.json
-vpn-go-cli client
+# Basic run utilizing saved configuration in ~/.ssh-vpn/profile.json
+ssh-vpn-cli client
 
 # Connect to a different profile by name
-vpn-go-cli -profile "WorkServer" client
+ssh-vpn-cli -profile "WorkServer" client
 
 # Execute a one-off connection overriding the host natively
-vpn-go-cli client -host ssh.example.com -port 2222 -mode socks5
+ssh-vpn-cli client -host ssh.example.com -port 2222 -mode socks5
 ```
 
 ---
@@ -49,7 +49,7 @@ vpn-go-cli client -host ssh.example.com -port 2222 -mode socks5
 Starts the embedded, lightweight SSH server optimized for VPN proxying (Path A in our Server Guide).
 
 ```bash
-vpn-go-cli [global-flags] server [flags]
+ssh-vpn-cli [global-flags] server [flags]
 ```
 
 ### Server Flags
@@ -62,10 +62,10 @@ vpn-go-cli [global-flags] server [flags]
 ---
 
 ## 👤 User Subcommand (Server Management)
-Handles authentication credentials for the built-in `vpn-go-cli server`.
+Handles authentication credentials for the built-in `ssh-vpn-cli server`.
 
 ```bash
-vpn-go-cli user <action> [username] [flags]
+ssh-vpn-cli user <action> [username] [flags]
 ```
 
 ### Actions
@@ -81,29 +81,29 @@ Add a new user credential or update an existing one.
 
 **Example:**
 ```bash
-vpn-go-cli user add alice -pass "secure123"
-vpn-go-cli user add bob -gen-key -key-path ./bob_id_ed25519
+ssh-vpn-cli user add alice -pass "secure123"
+ssh-vpn-cli user add bob -gen-key -key-path ./bob_id_ed25519
 ```
 
 #### 2. Remove (`user del`)
 Remove a user from the authorized list.
 ```bash
-vpn-go-cli user del alice
+ssh-vpn-cli user del alice
 ```
 
 #### 3. List (`user list`)
 Show all authorized users and their active authentication types.
 ```bash
-vpn-go-cli user list
+ssh-vpn-cli user list
 ```
 
 ---
 
 ## 📈 Status Subcommand
-Inspects the current network performance and throughput of an actively running local `vpn-go-cli` daemon.
+Inspects the current network performance and throughput of an actively running local `ssh-vpn-cli` daemon.
 
 ```bash
-vpn-go-cli status
+ssh-vpn-cli status
 ```
 
 **Output Example:**
@@ -117,14 +117,14 @@ Bytes sent:            32 MB
 
 ---
 
-# Standalone `vpn-go-server` Reference
+# Standalone `ssh-vpn-server` Reference
 
-While `vpn-go-cli server` starts an embedded SSH server from inside the client, the `vpn-go-server` binary is a dedicated, hardened server executable designed for background system services and router deployments (e.g., OpenWrt).
+While `ssh-vpn-cli server` starts an embedded SSH server from inside the client, the `ssh-vpn-server` binary is a dedicated, hardened server executable designed for background system services and router deployments (e.g., OpenWrt).
 
 ## Command-Line Arguments
 
 ```bash
-vpn-go-server [flags] [command]
+ssh-vpn-server [flags] [command]
 ```
 
 | Flag | Description | Default |
@@ -134,7 +134,7 @@ vpn-go-server [flags] [command]
 | `-user` | Pre-configure an SSH username. | |
 | `-pass` | Pre-configure an SSH password. | |
 | `-key` | Path to valid `authorized_keys`. | |
-| `-config-dir` | Path containing server data and configuration. | `~/.vpn-go` |
+| `-config-dir` | Path containing server data and configuration. | `~/.ssh-vpn` |
 
 ## Subcommands
 
@@ -154,7 +154,7 @@ vpn-go-server [flags] [command]
 
 ## Environment Variable Tuning (Advanced)
 
-For highly constrained environments like 64MB memory OpenWrt routers, the `vpn-go-server` respects Go runtime flags and internal SSH Direct-TCP threshold variables to aggressively manage memory overhead.
+For highly constrained environments like 64MB memory OpenWrt routers, the `ssh-vpn-server` respects Go runtime flags and internal SSH Direct-TCP threshold variables to aggressively manage memory overhead.
 
 ### Go Runtime Limits
 
@@ -168,10 +168,10 @@ For highly constrained environments like 64MB memory OpenWrt routers, the `vpn-g
 
 | Variable | Default | Description |
 |---|---|---|
-| `VPNGO_SSHD_MAX_DIRECT_GLOBAL` | `2048` | Maximum absolutely total concurrent TCP tunnels allowed simultaneously. Dial it down to ~128 on memory starved devices. |
-| `VPNGO_SSHD_MAX_DIRECT_PER_CONN` | `64` | Maximum tunnels a single authenticated user/connection can spawn (Prevents single-user abuse). |
-| `VPNGO_SSHD_DIAL_TIMEOUT` | `10s` | How long the server waits to establish a downstream connection before giving up. |
-| `VPNGO_SSHD_DIAL_KEEPALIVE` | `30s` | OS-level TCP KeepAlive probe period for downstream target sockets. |
-| `VPNGO_SSHD_RELAY_IDLE_TIMEOUT` | `5m` | Trimming period. Shuts down silent forwarded tunnels that haven't sent data in this timeframe. |
+| `SSHVPN_SSHD_MAX_DIRECT_GLOBAL` | `2048` | Maximum absolutely total concurrent TCP tunnels allowed simultaneously. Dial it down to ~128 on memory starved devices. |
+| `SSHVPN_SSHD_MAX_DIRECT_PER_CONN` | `64` | Maximum tunnels a single authenticated user/connection can spawn (Prevents single-user abuse). |
+| `SSHVPN_SSHD_DIAL_TIMEOUT` | `10s` | How long the server waits to establish a downstream connection before giving up. |
+| `SSHVPN_SSHD_DIAL_KEEPALIVE` | `30s` | OS-level TCP KeepAlive probe period for downstream target sockets. |
+| `SSHVPN_SSHD_RELAY_IDLE_TIMEOUT` | `5m` | Trimming period. Shuts down silent forwarded tunnels that haven't sent data in this timeframe. |
 
-*Note: When you run `vpn-go-server service install`, the CLI actively detects these exported environment variables in your current shell and permanently embeds them into your `systemd` or `openrc` daemon configuration.*
+*Note: When you run `ssh-vpn-server service install`, the CLI actively detects these exported environment variables in your current shell and permanently embeds them into your `systemd` or `openrc` daemon configuration.*

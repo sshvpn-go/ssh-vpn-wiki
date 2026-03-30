@@ -1,21 +1,21 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "SSHVPN",
+  title: "ssh-vpn",
   description: "The next generation VPN leveraging SSH.",
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     // 4.1 SEO Meta Tags
     ['meta', { name: 'keywords', content: 'vpn, ssh, open-source, proxy, secure networking' }],
-    ['meta', { property: 'og:title', content: 'SSHVPN - Modern SSH-based VPN' }],
+    ['meta', { property: 'og:title', content: 'ssh-vpn - Modern SSH-based VPN' }],
     ['meta', { property: 'og:description', content: 'Fast, secure, and multi-platform VPN using standard SSH protocols.' }],
     // 4.3 Setup hreflang pointing to root languages for proper SEO
-    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://sshvpn.org/' }],
-    ['link', { rel: 'alternate', hreflang: 'zh', href: 'https://sshvpn.org/zh/' }]
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://ssh-vpn.org/' }],
+    ['link', { rel: 'alternate', hreflang: 'zh', href: 'https://ssh-vpn.org/zh/' }]
   ],
   sitemap: {
     // 4.2 Automatic Sitemap Generation
-    hostname: 'https://sshvpn.org'
+    hostname: 'https://ssh-vpn.org'
   },
   // 1.3 Dual language configuration
   locales: {
@@ -42,7 +42,7 @@ export default defineConfig({
           }
         ],
         editLink: {
-          pattern: 'https://github.com/vpn-go/vpn-go-wiki/edit/main/src/:path',
+          pattern: 'https://github.com/ssh-vpn/ssh-vpn-wiki/edit/main/src/:path',
           text: 'Edit this page'
         }
       }
@@ -51,7 +51,7 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh/',
-      title: "SSHVPN",
+      title: "ssh-vpn",
       description: "基于 SSH 的下一代虚拟专用网络",
       themeConfig: {
         nav: [
@@ -73,7 +73,7 @@ export default defineConfig({
           }
         ],
         editLink: {
-          pattern: 'https://github.com/vpn-go/vpn-go-wiki/edit/main/src/:path',
+          pattern: 'https://github.com/ssh-vpn/ssh-vpn-wiki/edit/main/src/:path',
           text: '编辑此页'
         },
         docFooter: {
@@ -92,11 +92,11 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png', // 1.2 Uses the custom logo from public directory
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vpn-go/vpn-go' }
+      { icon: 'github', link: 'https://github.com/ssh-vpn/ssh-vpn' }
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026-present SSHVPN Contributors'
+      copyright: 'Copyright © 2026-present ssh-vpn Contributors'
     }
   }
 })

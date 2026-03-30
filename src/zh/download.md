@@ -1,6 +1,6 @@
-# 下载 SSHVPN
+# 下载 ssh-vpn
 
-获取适用于您平台的 SSHVPN 官方客户端。
+获取适用于您平台的 ssh-vpn 官方客户端。
 
 ## 桌面端客户端
 
@@ -15,7 +15,7 @@
 
 ## 服务端二进制
 
-部署您自己的 SSHVPN 服务端:
+部署您自己的 ssh-vpn 服务端:
 
 - **Linux (x86_64, aarch64, mipsle 等)**: [下载压缩包](#)
-- **Docker 镜像**: `docker pull vpngo/server:latest`
+- **Docker 镜像**: `docker pull ssh-vpn/server:latest`

@@ -1,6 +1,6 @@
-# Download SSHVPN
+# Download ssh-vpn
 
-Get the official SSHVPN client for your platform.
+Get the official ssh-vpn client for your platform.
 
 ## Desktop Clients
 
@@ -15,7 +15,7 @@ Get the official SSHVPN client for your platform.
 
 ## Server Binaries
 
-To deploy your own SSHVPN server:
+To deploy your own ssh-vpn server:
 
 - **Linux (x86_64, aarch64, mipsle)**: [Download Release Archive](#)
-- **Docker Image**: `docker pull vpngo/server:latest`
+- **Docker Image**: `docker pull ssh-vpn/server:latest`

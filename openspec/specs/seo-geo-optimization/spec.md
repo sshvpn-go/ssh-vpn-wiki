@@ -1,7 +1,7 @@
 # SEO & GEO Optimization
 
 ## Purpose
-Ensure that the SSHVPN documentation is correctly indexed by global search engines and provides a seamless localization experience for users based on their geographical location or browser language settings.
+Ensure that the ssh-vpn documentation is correctly indexed by global search engines and provides a seamless localization experience for users based on their geographical location or browser language settings.
 
 ## Requirements
 

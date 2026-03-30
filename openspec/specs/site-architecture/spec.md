@@ -1,7 +1,7 @@
 # Site Architecture
 
 ## Purpose
-The architectural foundation for the SSHVPN documentation site using VitePress with multi-language support.
+The architectural foundation for the ssh-vpn documentation site using VitePress with multi-language support.
 
 ## Requirements
 

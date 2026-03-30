@@ -1,6 +1,6 @@
 # Client Usage Guide
 
-The SSHVPN client provides both an intuitive graphical interface (GUI) for everyday users, and a flexible command-line interface (CLI) for advanced power users.
+The ssh-vpn client provides both an intuitive graphical interface (GUI) for everyday users, and a flexible command-line interface (CLI) for advanced power users.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ Whether you are bypassing network restrictions or accessing corporate environmen
 
 ## Smart Routing & Rules Engine
 
-To minimize latency and seamlessly access both local infrastructure and blocked international networks simultaneously, SSHVPN features a built-in split routing engine.
+To minimize latency and seamlessly access both local infrastructure and blocked international networks simultaneously, ssh-vpn features a built-in split routing engine.
 
 <div class="device-row" style="margin: 2rem 0;">
   <div class="device-container device-pc" style="max-width: 500px;">
@@ -66,19 +66,19 @@ To minimize latency and seamlessly access both local infrastructure and blocked 
 <summary><b>Command-Line Interface (For Advanced Users)</b></summary>
 <br/>
 
-If you manage servers or prefer the terminal, SSHVPN provides a headless daemon CLI suitable for scripting and background services.
+If you manage servers or prefer the terminal, ssh-vpn provides a headless daemon CLI suitable for scripting and background services.
 
 ```bash
 # Example: One-off connection overriding the host
-vpn-go-cli client -host 123.45.67.89 -port 2222 -mode socks5
+ssh-vpn-cli client -host 123.45.67.89 -port 2222 -mode socks5
 
 # Example: Using a saved configuration profile (e.g. "WorkServer")
-vpn-go-cli -profile "WorkServer" client
+ssh-vpn-cli -profile "WorkServer" client
 ```
 
 *When connected via the default SOCKS5 mode, you can pipe traffic manually:*
 ```bash
-# Using curl over the SSHVPN proxy
+# Using curl over the ssh-vpn proxy
 curl --socks5 127.0.0.1:1080 https://ifconfig.me
 ```
 

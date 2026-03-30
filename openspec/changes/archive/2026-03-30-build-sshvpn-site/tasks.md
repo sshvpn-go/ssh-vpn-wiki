@@ -1,6 +1,6 @@
 ## 1. Project Initialization & Architecture
 
-- [x] 1.1 Scaffold a new VitePress project inside the `vpn-go-wiki/src` directory.
+- [x] 1.1 Scaffold a new VitePress project inside the `ssh-vpn-wiki/src` directory.
 - [x] 1.2 Copy/Configure `src/assets/icons/app.png` as the primary site logo and favicon in the VitePress configuration.
 - [x] 1.3 Set up VitePress `config.js` or `config.ts` for dual-language support: English (`/`) and Chinese (`/zh/`).
 - [x] 1.4 Configure the top navigation bar and respective global sidebars for both supported languages.

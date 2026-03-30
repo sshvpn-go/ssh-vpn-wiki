@@ -1,6 +1,6 @@
 # CLI 命令行参考指南
 
-`vpn-go-cli` 不仅仅是一个连接工具，它同时还是服务端和极客首选的诊断工具。这里详细列出了如何通过命令行完全驾驭您的代理服务。
+`ssh-vpn-cli` 不仅仅是一个连接工具，它同时还是服务端和极客首选的诊断工具。这里详细列出了如何通过命令行完全驾驭您的代理服务。
 
 ## 全局参数 (Global Flags)
 
@@ -8,7 +8,7 @@
 
 | 选项参数 | 说明 | 默认值 |
 |---|---|---|
-| `-config-dir` | 指定带有 `profile.json` 及其对应密钥的环境配置目录 | `~/.vpn-go` |
+| `-config-dir` | 指定带有 `profile.json` 及其对应密钥的环境配置目录 | `~/.ssh-vpn` |
 | `-profile` | 指定激活哪个已保存的节点配置 | *（当前选中的 Profile）* |
 | `-v` | 显示软件版本号并退出 | |
 
@@ -18,7 +18,7 @@
 根据配置发起与远程代理服务器的连接，自动处理网络接口及 SOCKS5 开放。
 
 ```bash
-vpn-go-cli [全局参数] client [参数]
+ssh-vpn-cli [全局参数] client [参数]
 ```
 
 ### 客户端独占参数
@@ -33,14 +33,14 @@ vpn-go-cli [全局参数] client [参数]
 
 ### 示例用法
 ```bash
-# 自动读取硬盘 ~/.vpn-go/profile.json 发起连接
-vpn-go-cli client
+# 自动读取硬盘 ~/.ssh-vpn/profile.json 发起连接
+ssh-vpn-cli client
 
 # 载入另一个预设配置环境来连接
-vpn-go-cli -profile "公司内网" client
+ssh-vpn-cli -profile "公司内网" client
 
 # 一次性临时连接新服务器，强行覆盖地址与端口
-vpn-go-cli client -host 192.168.1.100 -port 2222 -mode socks5
+ssh-vpn-cli client -host 192.168.1.100 -port 2222 -mode socks5
 ```
 
 ---
@@ -49,7 +49,7 @@ vpn-go-cli client -host 192.168.1.100 -port 2222 -mode socks5
 拉起专门优化的内嵌 OpenSSH 服务进程（适用于服务端轻量部署模式 A）。
 
 ```bash
-vpn-go-cli [全局参数] server [参数]
+ssh-vpn-cli [全局参数] server [参数]
 ```
 
 ### 服务端独占参数
@@ -65,7 +65,7 @@ vpn-go-cli [全局参数] server [参数]
 专用于管理官方内置服务端（`server` 进程）的授权凭证。注意，不支持修改系统自带 OpenSSH 的账户。
 
 ```bash
-vpn-go-cli user <行为> [用户名] [参数]
+ssh-vpn-cli user <行为> [用户名] [参数]
 ```
 
 ### 行为列表
@@ -81,20 +81,20 @@ vpn-go-cli user <行为> [用户名] [参数]
 
 **示例:**
 ```bash
-vpn-go-cli user add charlie -pass "secure123"
-vpn-go-cli user add bob -gen-key -key-path ./bob_id_ed25519
+ssh-vpn-cli user add charlie -pass "secure123"
+ssh-vpn-cli user add bob -gen-key -key-path ./bob_id_ed25519
 ```
 
 #### 2. 删除 (`user del`)
 撤销指定用户的登录权限。
 ```bash
-vpn-go-cli user del charlie
+ssh-vpn-cli user del charlie
 ```
 
 #### 3. 列表 (`user list`)
 列出当前服务器批准的所有用户权限。
 ```bash
-vpn-go-cli user list
+ssh-vpn-cli user list
 ```
 
 ---
@@ -103,7 +103,7 @@ vpn-go-cli user list
 在后台服务（如 TUN 与 Client）静默运行时，检查底层的连接稳定性与网络吞吐指标。
 
 ```bash
-vpn-go-cli status
+ssh-vpn-cli status
 ```
 
 **模拟展示输出:**
@@ -117,14 +117,14 @@ Bytes sent:            210 MB
 
 ---
 
-# 独立服务端 `vpn-go-server` 参考
+# 独立服务端 `ssh-vpn-server` 参考
 
-虽说普通的 `vpn-go-cli server` 可以在客户端进程内随手拉起个服务，但这只适合尝鲜测试。**真正的生产环境与路由器（如 OpenWrt）节点部署，务必要使用此专门强化的 `vpn-go-server` 二进制程序。**
+虽说普通的 `ssh-vpn-cli server` 可以在客户端进程内随手拉起个服务，但这只适合尝鲜测试。**真正的生产环境与路由器（如 OpenWrt）节点部署，务必要使用此专门强化的 `ssh-vpn-server` 二进制程序。**
 
 ## 随调参数 (Flags)
 
 ```bash
-vpn-go-server [参数] [子命令]
+ssh-vpn-server [参数] [子命令]
 ```
 
 | 参数 | 说明 | 默认值 |
@@ -134,11 +134,11 @@ vpn-go-server [参数] [子命令]
 | `-user` | 以覆写模式预注册一个账号名。 | |
 | `-pass` | 以覆写模式配置该账号密码。 | |
 | `-key` | 直接定位合法的公钥存放路径。 | |
-| `-config-dir` | 保存服务运行配置数据乃至日志的本地目录。 | `~/.vpn-go` |
+| `-config-dir` | 保存服务运行配置数据乃至日志的本地目录。 | `~/.ssh-vpn` |
 
 ## 子命令 (Subcommands)
 
-`vpn-go-server` 自带强大的后台常驻管理功能，不再需要您去手写复杂的 `systemd` 脚本即可实现开机开洞与崩溃重启。
+`ssh-vpn-server` 自带强大的后台常驻管理功能，不再需要您去手写复杂的 `systemd` 脚本即可实现开机开洞与崩溃重启。
 
 | 命令 | 描述 |
 |---|---|
@@ -170,10 +170,10 @@ vpn-go-server [参数] [子命令]
 
 | 变量 | 默认值 | 说明 |
 |---|---|---|
-| `VPNGO_SSHD_MAX_DIRECT_GLOBAL` | `2048` | 全局允许并存的 TCP 活跃隧道综合上限。如果是老旧路由器请死死卡在 ~128 左右即可。 |
-| `VPNGO_SSHD_MAX_DIRECT_PER_CONN` | `64` | **防单用户滥用机制。** 限制同一个授权人能疯狂开启多少个管道。 |
-| `VPNGO_SSHD_DIAL_TIMEOUT` | `10s` | 发向最终目的地（如下游网站）的网络拨号死等耐心时间。 |
-| `VPNGO_SSHD_DIAL_KEEPALIVE` | `30s` | 隧道操作系统层面的存活嗅探扫描周期。 |
-| `VPNGO_SSHD_RELAY_IDLE_TIMEOUT` | `5m` | 修剪枯枝期。若下游某一条转发连接默默无闻长达此时间（没有报文活动），服务端会主动无情砍杀以释放资源。 |
+| `SSHVPN_SSHD_MAX_DIRECT_GLOBAL` | `2048` | 全局允许并存的 TCP 活跃隧道综合上限。如果是老旧路由器请死死卡在 ~128 左右即可。 |
+| `SSHVPN_SSHD_MAX_DIRECT_PER_CONN` | `64` | **防单用户滥用机制。** 限制同一个授权人能疯狂开启多少个管道。 |
+| `SSHVPN_SSHD_DIAL_TIMEOUT` | `10s` | 发向最终目的地（如下游网站）的网络拨号死等耐心时间。 |
+| `SSHVPN_SSHD_DIAL_KEEPALIVE` | `30s` | 隧道操作系统层面的存活嗅探扫描周期。 |
+| `SSHVPN_SSHD_RELAY_IDLE_TIMEOUT` | `5m` | 修剪枯枝期。若下游某一条转发连接默默无闻长达此时间（没有报文活动），服务端会主动无情砍杀以释放资源。 |
 
-*小提示：在您执行 `vpn-go-server service install` 时，程序会自动嗅探以上你提前 `export` 导出的上述优化参数，并永久缝合进后台系统的守护文件里！*
+*小提示：在您执行 `ssh-vpn-server service install` 时，程序会自动嗅探以上你提前 `export` 导出的上述优化参数，并永久缝合进后台系统的守护文件里！*

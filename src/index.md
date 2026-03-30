@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "SSHVPN"
+  name: "ssh-vpn"
   text: "The modern, fast, and secure next-generation VPN built on standard SSH."
   tagline: Bypass firewalls, tunnel your connection, and seamlessly access international networks—designed for both everyday users and developers.
   image:
     src: /logo.png
-    alt: SSHVPN Logo
+    alt: ssh-vpn Logo
   actions:
     - theme: brand
       text: Get Started
@@ -17,7 +17,7 @@ hero:
       link: /download
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vpn-go/vpn-go
+      link: https://github.com/ssh-vpn/ssh-vpn
 
 features:
   - title: Next-Gen Security
@@ -44,16 +44,16 @@ features:
 
 ## 🖥️ Cross-Platform Experience
 
-From the expansive real estate of a 4K desktop to the portability of a mobile screen, SSHVPN provides a consistent and fluid user experience across all your devices.
+From the expansive real estate of a 4K desktop to the portability of a mobile screen, ssh-vpn provides a consistent and fluid user experience across all your devices.
 
 <div class="device-row">
   <div class="device-container device-pc">
     <div class="glow-effect"></div>
-    <img src="./public/images/pc/home.jpg" alt="SSHVPN Desktop Home">
+    <img src="./public/images/pc/home.jpg" alt="ssh-vpn Desktop Home">
   </div>
   <div class="device-container device-mobile">
     <div class="glow-effect"></div>
-    <img src="./public/images/mobile/home.jpg" alt="SSHVPN Mobile Home">
+    <img src="./public/images/mobile/home.jpg" alt="ssh-vpn Mobile Home">
   </div>
 </div>
 
@@ -65,7 +65,7 @@ From the expansive real estate of a 4K desktop to the portability of a mobile sc
 
 ## 👥 Who is it for?
 
-Whether you are a developer, a sysadmin, or a privacy-conscious user, SSHVPN is built for you:
+Whether you are a developer, a sysadmin, or a privacy-conscious user, ssh-vpn is built for you:
 
 - **AI Developers & Researchers**: Pair with OpenClaw servers for stable, high-speed access to ChatGPT, Claude, and Gemini from anywhere.
 - **Global Teams**: Accelerate Git cloning (GitHub/GitLab) and seamlessly manage remote production environments.
@@ -81,10 +81,10 @@ Whether you are a developer, a sysadmin, or a privacy-conscious user, SSHVPN is 
 ## 🎯 Use Cases
 
 ### 🤖 Seamless AI Integration
-Easily configure your OpenClaw credentials. Whether you prefer full TUN mode or a lightweight SOCKS5 proxy, SSHVPN optimizes your AI-assisted development workflow with uncompromised stability.
+Easily configure your OpenClaw credentials. Whether you prefer full TUN mode or a lightweight SOCKS5 proxy, ssh-vpn optimizes your AI-assisted development workflow with uncompromised stability.
 
 ### 💻 Smarter Remote Work
-Access internal corporate portals, databases, and staging servers securely. SSHVPN's optimized protocol remains stable even during high-latency mobile or satellite connections.
+Access internal corporate portals, databases, and staging servers securely. ssh-vpn's optimized protocol remains stable even during high-latency mobile or satellite connections.
 
 ### 🛡️ Secure Communications
 Wrap all your traffic in battle-tested SSH encryption. Defend against Man-in-the-Middle (MITM) attacks and data sniffing on unencrypted public hotspots with ease.

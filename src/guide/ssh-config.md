@@ -1,7 +1,7 @@
 # Configuration Reference (`profile.json`)
 
 Behind the intuitive Graphical Interface (GUI) lies a highly structured JSON configuration file. 
-Whether you're automating deployments, auditing security parameters, or unlocking advanced routing features, understanding `~/.vpn-go/profile.json` is essential for power users.
+Whether you're automating deployments, auditing security parameters, or unlocking advanced routing features, understanding `~/.ssh-vpn/profile.json` is essential for power users.
 
 ## The Config Structure
 
@@ -27,7 +27,7 @@ Determines how the tunnel interfaces with your operating system.
 |---|---|---|
 | `mode` | String | `"socks5"` for userspace proxy, or `"tun"` for global VPN take-over. |
 | `socks5_port`| Number | Only applies in `"socks5"` mode. The localhost port to intercept network calls (defaults to `1080`). |
-| `tun_name` | String | Define a custom name for the virtual card (e.g. `vpngo0`). Keep empty to auto-assign (`utun*` on mac, `tun0` on Linux). |
+| `tun_name` | String | Define a custom name for the virtual card (e.g. `sshvpn0`). Keep empty to auto-assign (`utun*` on mac, `tun0` on Linux). |
 | `tun_ipv4` | String | The virtual IP & Mask assigned by the TUN interface (e.g., `10.0.0.1/24`). |
 | `tun_ipv6` | String | The virtual IPv6 assigning mask (e.g., `fd00::1/64`). |
 | `enable_system_proxy` | Boolean | If `true` under `"socks5"`, automatically overrides OS network settings to pipe all unencrypted traffic. |
