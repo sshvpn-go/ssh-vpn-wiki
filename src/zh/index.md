@@ -109,7 +109,7 @@ features:
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
-.content-container h2 {
+.VPHome .content-container h2 {
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 700;
@@ -117,20 +117,20 @@ features:
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.content-container ul {
+.VPHome .content-container ul {
   list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
-.content-container li {
+.VPHome .content-container li {
   background: var(--vp-c-bg);
   padding: 1.5rem;
   border-radius: 16px;
   border: 1px solid var(--vp-c-gutter);
 }
-.content-container h3 {
+.VPHome .content-container h3 {
   margin-top: 2rem;
   color: var(--vp-c-brand-1);
 }
