@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "ssh-vpn"
-  text: "A modern, fast, and secure SSH-based remote access client."
+  name: "EasyConnect SSH"
+  text: "Code name: ssh-vpn"
   tagline: Secure SSH tunneling for remote administration, internal network access, and protected development workflows.
   image:
     src: /logo.png
-    alt: ssh-vpn Logo
+    alt: EasyConnect SSH Logo
   actions:
     - theme: brand
       text: Get Started
@@ -44,16 +44,16 @@ features:
 
 ## 🖥️ Cross-Platform Experience
 
-From the expansive real estate of a 4K desktop to the portability of a mobile screen, ssh-vpn provides a consistent and fluid user experience across all your devices.
+From the expansive real estate of a 4K desktop to the portability of a mobile screen, EasyConnect SSH provides a consistent and fluid user experience across all your devices.
 
 <div class="device-row">
   <div class="device-container device-pc">
     <div class="glow-effect"></div>
-    <img src="./public/images/pc/home.jpg" alt="ssh-vpn Desktop Home">
+    <img src="./public/images/pc/home.jpg" alt="EasyConnect SSH Desktop Home">
   </div>
   <div class="device-container device-mobile">
     <div class="glow-effect"></div>
-    <img src="./public/images/mobile/home.jpg" alt="ssh-vpn Mobile Home">
+    <img src="./public/images/mobile/home.jpg" alt="EasyConnect SSH Mobile Home">
   </div>
 </div>
 
@@ -65,7 +65,7 @@ From the expansive real estate of a 4K desktop to the portability of a mobile sc
 
 ## 👥 Who is it for?
 
-Whether you are a developer, a sysadmin, or an IT operator, ssh-vpn is built for legitimate remote access and internal connectivity scenarios:
+Whether you are a developer, a sysadmin, or an IT operator, EasyConnect SSH is built for legitimate remote access and internal connectivity scenarios:
 
 - **Developers**: Reach internal package mirrors, staging systems, and remote Linux hosts from a single desktop or mobile client.
 - **IT Operations**: Provide staff with a lightweight SSH-based path to bastion hosts, maintenance networks, and operational tooling.
@@ -84,13 +84,13 @@ Whether you are a developer, a sysadmin, or an IT operator, ssh-vpn is built for
 Use a saved SSH profile to reach remote development machines, package registries, or internal tooling over an encrypted tunnel. SOCKS5 and TUN modes cover both app-specific and system-level workflows.
 
 ### 💻 Smarter Remote Work
-Access internal corporate portals, databases, and staging servers securely. ssh-vpn remains suitable for remote administration and field work where network quality can vary.
+Access internal corporate portals, databases, and staging servers securely. EasyConnect SSH remains suitable for remote administration and field work where network quality can vary.
 
 ### 🛡️ Protected Connections
 Wrap sensitive traffic in battle-tested SSH encryption to reduce exposure on untrusted local networks and public hotspots.
 
 ### 🌐 Regional Compliance
-ssh-vpn is intended for international use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
+EasyConnect SSH is intended for international use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
 
 </div>
 

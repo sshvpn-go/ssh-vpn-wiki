@@ -1,6 +1,6 @@
-# 下载 ssh-vpn
+# 下载易连
 
-获取适用于您平台的 ssh-vpn 官方客户端。
+获取适用于您平台的易连（EasyConnect SSH）官方客户端。项目代码名为 `ssh-vpn`。
 
 ## 桌面端客户端
 
@@ -15,7 +15,7 @@
 
 ## 服务端二进制
 
-部署您自己的 ssh-vpn 服务端:
+部署您自己的易连服务端：
 
 - **Linux (x86_64, aarch64, mipsle 等)**: [下载压缩包](#)
 - **Docker 镜像**: `docker pull ssh-vpn/server:latest`

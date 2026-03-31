@@ -5,19 +5,19 @@ aside: false
 
 # Pricing & Subscriptions
 
-While ssh-vpn remains 100% open-source for self-hosting, we offer the following subscription plans to support ongoing development and unlock premium features.
+EasyConnect SSH remains 100% open-source for self-hosting. The plans below are presented as optional commercial support and service packages for teams that need managed delivery and ongoing assistance.
 
 <div id="ssh-vpn-pricing" class="pricing-container">
   <!-- Monthly Plan -->
   <div class="pricing-card">
     <div class="plan-name">Monthly</div>
     <div class="plan-price">$9.99<span class="unit">/ mo</span></div>
-    <div class="plan-desc">Flexible choice for short-term users or those who want to test the full experience.</div>
+    <div class="plan-desc">A flexible option for short-term evaluation, pilot rollouts, or temporary project needs.</div>
     <ul class="plan-features">
       <li>Cross-platform App Support</li>
       <li>Smart Routing Engine</li>
-      <li>Unlimited Concurrent Connections</li>
-      <li>Priority Community Support</li>
+      <li>Managed Distribution Access</li>
+      <li>Priority Support</li>
     </ul>
     <div class="plan-button">Get Started</div>
   </div>
@@ -28,12 +28,12 @@ While ssh-vpn remains 100% open-source for self-hosting, we offer the following 
     <div class="plan-name">Yearly</div>
     <div class="plan-price">$49.99<span class="unit">/ yr</span></div>
     <div class="plan-tag">~$4.17 / mo (Save 58%)</div>
-    <div class="plan-desc">The best value for power users who need reliable, long-term performance.</div>
+    <div class="plan-desc">A balanced plan for teams that need reliable long-term access, updates, and operational assistance.</div>
     <ul class="plan-features">
       <li><strong>All Monthly Features</strong></li>
-      <li>4K Streaming Optimization</li>
-      <li>Low-Latency Global Nodes</li>
-      <li>1-on-1 Expert Technical Support</li>
+      <li>Long-Term Version Updates</li>
+      <li>Deployment Guidance</li>
+      <li>1-on-1 Technical Support</li>
     </ul>
     <div class="plan-button featured">Save Now</div>
   </div>
@@ -42,12 +42,12 @@ While ssh-vpn remains 100% open-source for self-hosting, we offer the following 
   <div class="pricing-card">
     <div class="plan-name">Lifetime</div>
     <div class="plan-price">$99.99<span class="unit">/ once</span></div>
-    <div class="plan-desc">For heavy users who want to "pay once, use forever" and support the project.</div>
+    <div class="plan-desc">For long-term supporters who prefer a one-time purchase and ongoing access to future releases.</div>
     <ul class="plan-features">
       <li><strong>Pay Once, Use Forever</strong></li>
       <li>All Future Major Upgrades</li>
-      <li>Exclusive "Lifetime Donor" Badge</li>
-      <li>Highest Priority for Feature Requests</li>
+      <li>Supporter Recognition</li>
+      <li>Priority Consideration for Feature Requests</li>
     </ul>
     <div class="plan-button">Buy Once</div>
   </div>
@@ -56,7 +56,7 @@ While ssh-vpn remains 100% open-source for self-hosting, we offer the following 
 ---
 
 ## Open-Source (Self-Hosted)
-If you have your own infrastructure and enjoy tinkering, ssh-vpn is still free:
+If you have your own infrastructure and enjoy self-hosting, EasyConnect SSH is still free:
 - **Core Engine**: 100% Free & Open-Source
 - **Deployment**: Follow the **[Server Guide](/guide/server-usage)** to host it yourself.
 - **Support**: Get help through GitHub Discussions.

@@ -1,14 +1,14 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "ssh-vpn",
-  description: "SSH-based remote access documentation for international teams, lawful internal connectivity, and compliant operations.",
+  title: "EasyConnect SSH",
+  description: "EasyConnect SSH is an SSH-based remote access client for international teams, lawful internal connectivity, and compliant operations.",
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     // 4.1 SEO Meta Tags
-    ['meta', { name: 'keywords', content: 'ssh remote access, ssh tunnel, open-source, proxy, secure networking' }],
-    ['meta', { property: 'og:title', content: 'ssh-vpn - SSH-Based Remote Access Client' }],
-    ['meta', { property: 'og:description', content: 'Fast, secure, and multi-platform SSH-based remote access for internal connectivity and operations.' }],
+    ['meta', { name: 'keywords', content: 'EasyConnect SSH, VPN,ssh-vpn, ssh remote access, ssh tunnel, open-source, proxy, secure networking' }],
+    ['meta', { property: 'og:title', content: 'EasyConnect SSH - SSH-Based Remote Access Client' }],
+    ['meta', { property: 'og:description', content: 'EasyConnect SSH is a fast, secure, and multi-platform SSH-based remote access client for internal connectivity and operations.' }],
     // 4.3 Setup hreflang pointing to root languages for proper SEO
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://ssh-vpn.xinghui.club/' }],
     ['link', { rel: 'alternate', hreflang: 'zh', href: 'https://ssh-vpn.xinghui.club/zh/' }]
@@ -51,8 +51,8 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh/',
-      title: "ssh-vpn",
-      description: "基于 SSH 的远程接入文档，面向国际化团队的合法内网连接与合规运维场景",
+      title: "易连",
+      description: "易连（EasyConnect SSH）是基于 SSH 的远程接入客户端，面向国际化团队的合法内网连接与合规运维场景",
       themeConfig: {
         nav: [
           { text: '首页', link: '/zh/' },
@@ -96,7 +96,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026-present ssh-vpn Contributors'
+      copyright: 'Copyright © 2026-present EasyConnect SSH Contributors'
     }
   }
 })

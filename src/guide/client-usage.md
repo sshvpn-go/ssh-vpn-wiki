@@ -1,6 +1,6 @@
 # Client Usage Guide
 
-The ssh-vpn client provides both an intuitive graphical interface (GUI) for everyday users, and a flexible command-line interface (CLI) for advanced power users.
+EasyConnect SSH, code name `ssh-vpn`, provides both an intuitive graphical interface (GUI) for everyday users and a flexible command-line interface (CLI) for advanced power users.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ For legitimate remote administration, internal system access, or development wor
 
 ## Smart Routing & Rules Engine
 
-To minimize latency while keeping internal systems and local resources reachable, ssh-vpn includes a built-in split routing engine.
+To minimize latency while keeping internal systems and local resources reachable, EasyConnect SSH includes a built-in split routing engine.
 
 <div class="device-row" style="margin: 2rem 0;">
   <div class="device-container device-pc" style="max-width: 500px;">
@@ -66,7 +66,7 @@ To minimize latency while keeping internal systems and local resources reachable
 <summary><b>Command-Line Interface (For Advanced Users)</b></summary>
 <br/>
 
-If you manage servers or prefer the terminal, ssh-vpn provides a headless daemon CLI suitable for scripting and background services.
+If you manage servers or prefer the terminal, EasyConnect SSH provides a headless daemon CLI suitable for scripting and background services.
 
 ```bash
 # Example: One-off connection overriding the host

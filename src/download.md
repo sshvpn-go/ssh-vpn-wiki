@@ -1,6 +1,6 @@
-# Download ssh-vpn
+# Download EasyConnect SSH
 
-Get the official ssh-vpn client for your platform.
+Get the official EasyConnect SSH client for your platform. Code name: `ssh-vpn`.
 
 ## Desktop Clients
 
@@ -15,7 +15,7 @@ Get the official ssh-vpn client for your platform.
 
 ## Server Binaries
 
-To deploy your own ssh-vpn server:
+To deploy your own EasyConnect SSH server:
 
 - **Linux (x86_64, aarch64, mipsle)**: [Download Release Archive](#)
 - **Docker Image**: `docker pull ssh-vpn/server:latest`
