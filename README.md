@@ -36,6 +36,12 @@ pnpm preview
 
 Output directory: `src/.vitepress/dist/`.
 
+### Deploy to GitHub Pages
+
+Pushes to `main` run [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) (build with pnpm, upload `src/.vitepress/dist`, deploy via GitHub Pages).
+
+**One-time (repository admin):** GitHub → **Settings** → **Pages** → **Build and deployment** → set **Source** to **GitHub Actions** (not “Deploy from a branch”). If you use a [custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site), configure **DNS** and the **Custom domain** field on the same Pages settings screen.
+
 ### Editing docs
 
 The footer “Edit this page” link points to the matching Markdown file on the `main` branch of this repository.
@@ -73,6 +79,12 @@ pnpm preview
 ```
 
 构建输出目录：`src/.vitepress/dist/`。
+
+### 发布到 GitHub Pages
+
+向 `main` 推送会触发 [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)（pnpm 构建、上传 `src/.vitepress/dist`、由 GitHub Pages 发布）。
+
+**一次性设置（需仓库管理员）：** GitHub → **Settings** → **Pages** → **Build and deployment** → **Source** 选 **GitHub Actions**（不要选 “Deploy from a branch”）。若使用[自定义域名](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)，请在同一 Pages 页配置 **DNS** 与 **Custom domain**。
 
 ### 编辑文档
 
