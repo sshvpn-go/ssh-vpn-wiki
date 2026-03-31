@@ -14,5 +14,5 @@ By treating a simple SSH connection as a native system network interface, you cu
 
 We build openly, encouraging peer review to guarantee maximum network security.
 
-- **GitHub Repository**: [ssh-vpn](https://github.com/ssh-vpn/ssh-vpn)
+- **GitHub Repository**: [ssh-vpn](https://github.com/xinghui-tech/ssh-vpn-wiki/)
 - **Get Support**: Open GitHub Issues for setup help or new feature requests.

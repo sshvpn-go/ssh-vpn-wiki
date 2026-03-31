@@ -17,7 +17,7 @@ hero:
       link: /download
     - theme: alt
       text: View on GitHub
-      link: https://github.com/ssh-vpn/ssh-vpn
+      link: https://github.com/xinghui-tech/ssh-vpn-wiki/
 
 features:
   - title: Next-Gen Security

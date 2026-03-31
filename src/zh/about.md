@@ -16,5 +16,5 @@ ssh-vpn 拥抱精简到极致的可用性构建哲学。为了打造一个不会
 
 开源带来的不仅是白嫖文化，还有透明性赋予的最大程度安全性：每一个安全漏洞都能获得无国界黑客社区的审计修复。我们非常欢迎您的参与。
 
-- **GitHub 开源仓库**: [访问 ssh-vpn 源码](https://github.com/ssh-vpn/ssh-vpn)
-- **提交报告意见**: 获取应用指导、使用排障或新需求开发，请毫无顾忌地[开启新的 Issue](https://github.com/ssh-vpn/ssh-vpn/issues)。
+- **GitHub 开源仓库**: [访问 ssh-vpn 源码](https://github.com/xinghui-tech/ssh-vpn-wiki/)
+- **提交报告意见**: 获取应用指导、使用排障或新需求开发，请毫无顾忌地[开启新的 Issue](https://github.com/xinghui-tech/ssh-vpn-wiki/issues)。
