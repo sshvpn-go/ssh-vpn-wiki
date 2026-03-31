@@ -6,7 +6,7 @@
 
 ## English
 
-[VitePress](https://vitepress.dev/) site for **EasyConnect SSH** documentation. Product naming: **EasyConnect SSH** (English), **易连** (Chinese), code name **`ssh-vpn`**. Live site: <https://ssh-vpn.xinghui.club> (English at the root; Chinese under `/zh/`).
+[VitePress](https://vitepress.dev/) site for **EasyConnect SSH** documentation. Product naming: **EasyConnect SSH** (English), **易连助手** (Chinese), code name **`ssh-vpn`**. Live site: <https://ssh-vpn.xinghui.club> (English at the root; Chinese under `/zh/`).
 
 **Repository:** <https://github.com/xinghui-tech/ssh-vpn-wiki>
 
@@ -50,7 +50,7 @@ The footer “Edit this page” link points to the matching Markdown file on the
 
 ## 中文
 
-基于 [VitePress](https://vitepress.dev/) 的 **EasyConnect SSH / 易连** 文档站点，项目代码名为 **`ssh-vpn`**。线上地址：<https://ssh-vpn.xinghui.club>（英文为站点根路径，中文为 `/zh/`）。
+基于 [VitePress](https://vitepress.dev/) 的 **EasyConnect SSH / 易连助手** 文档站点，项目代码名为 **`ssh-vpn`**。线上地址：<https://ssh-vpn.xinghui.club>（英文为站点根路径，中文为 `/zh/`）。
 
 **源码仓库：** <https://github.com/xinghui-tech/ssh-vpn-wiki>
 

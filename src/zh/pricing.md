@@ -5,7 +5,7 @@ aside: false
 
 # 价格与订阅 (Pricing & Plans)
 
-易连（EasyConnect SSH）开源社区版始终支持 100% 自托管部署。以下方案可视为面向团队用户的可选商业支持与服务包，用于获取持续更新和协助。
+易连助手（EasyConnect SSH）开源社区版始终支持 100% 自托管部署。以下方案可视为面向团队用户的可选商业支持与服务包，用于获取持续更新和协助。
 
 <div id="ssh-vpn-pricing" class="pricing-container">
   <!-- Monthly Plan -->
@@ -56,7 +56,7 @@ aside: false
 ---
 
 ## 开源自托管 (Self-Hosted)
-如果您拥有自己的基础设施并乐于自托管，您依然可以免费使用易连（EasyConnect SSH）：
+如果您拥有自己的基础设施并乐于自托管，您依然可以免费使用易连助手（EasyConnect SSH）：
 - **核心功能**: 100% 免费开源
 - **部署方式**: 遵循 **[服务端指南](/zh/guide/server-usage)** 自行部署
 - **技术支持**: 通过 GitHub Discussions 获取社区支持

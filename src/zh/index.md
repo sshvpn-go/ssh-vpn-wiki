@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "易连"
+  name: "易连助手"
   text: "英文名：EasyConnect SSH；代码：ssh-vpn"
   tagline: 面向远程运维、企业内网接入与受控开发环境的安全 SSH 隧道工具。
   image:
     src: /logo.png
-    alt: 易连 Logo
+    alt: 易连助手 Logo
   actions:
     - theme: brand
       text: 快速开始
@@ -44,16 +44,16 @@ features:
 
 ## 🖥️ 视觉体验 (Cross-Platform Experience)
 
-无论是在 4K 桌面显示的宽广视野，还是在手机屏幕上的便捷操作，易连（EasyConnect SSH）都能为您提供一致且流畅的交互体验。
+无论是在 4K 桌面显示的宽广视野，还是在手机屏幕上的便捷操作，易连助手（EasyConnect SSH）都能为您提供一致且流畅的交互体验。
 
 <div class="device-row">
   <div class="device-container device-pc">
     <div class="glow-effect"></div>
-    <img src="../public/images/pc/home.jpg" alt="易连桌面端首页">
+    <img src="../public/images/pc/home.jpg" alt="易连助手桌面端首页">
   </div>
   <div class="device-container device-mobile">
     <div class="glow-effect"></div>
-    <img src="../public/images/mobile/home.jpg" alt="易连移动端首页">
+    <img src="../public/images/mobile/home.jpg" alt="易连助手移动端首页">
   </div>
 </div>
 
@@ -65,7 +65,7 @@ features:
 
 ## 👥 目标人群
 
-无论您是开发者、运维工程师还是企业 IT 管理者，易连（EasyConnect SSH）都适用于明确、合规的远程接入场景：
+无论您是开发者、运维工程师还是企业 IT 管理者，易连助手（EasyConnect SSH）都适用于明确、合规的远程接入场景：
 
 - **开发者**：安全连接内部代码仓库、测试环境、制品仓库和远程 Linux 主机。
 - **IT 运维工程师**：为团队提供到堡垒机、维护网络和运维工具的轻量化 SSH 接入能力。
@@ -84,13 +84,13 @@ features:
 通过保存好的 SSH 配置，安全访问远程开发机、内部制品源和企业工具链。SOCKS5 与 TUN 两种模式分别适合应用级和系统级工作流。
 
 ### 💻 高效的远程办公与运维
-通过易连（EasyConnect SSH）建立的加密隧道，您可以在授权前提下安全访问公司内部系统、数据库和测试机，并在网络波动时保持较好的连接稳定性。
+通过易连助手（EasyConnect SSH）建立的加密隧道，您可以在授权前提下安全访问公司内部系统、数据库和测试机，并在网络波动时保持较好的连接稳定性。
 
 ### 🛡️ 公共网络下的安全保护
-易连（EasyConnect SSH）可将敏感业务流量封装在成熟的 SSH 加密连接中，降低在不可信局域网中的被窃听与篡改风险。
+易连助手（EasyConnect SSH）可将敏感业务流量封装在成熟的 SSH 加密连接中，降低在不可信局域网中的被窃听与篡改风险。
 
 ### 🌐 面向各地区的合规使用
-易连（EasyConnect SSH）面向国际化使用场景，但具体部署和使用应遵守安装地、运营地和使用地适用的法律法规，以及组织内部的安全与合规要求。
+易连助手（EasyConnect SSH）面向国际化使用场景，但具体部署和使用应遵守安装地、运营地和使用地适用的法律法规，以及组织内部的安全与合规要求。
 
 </div>
 

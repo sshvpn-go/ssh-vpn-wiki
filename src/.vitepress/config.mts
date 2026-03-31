@@ -51,8 +51,8 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh/',
-      title: "易连",
-      description: "易连（EasyConnect SSH）是基于 SSH 的远程接入客户端，面向国际化团队的合法内网连接与合规运维场景",
+      title: "易连助手",
+      description: "易连助手（EasyConnect SSH）是基于 SSH 的远程接入客户端，面向国际化团队的合法内网连接与合规运维场景",
       themeConfig: {
         nav: [
           { text: '首页', link: '/zh/' },
