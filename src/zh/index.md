@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "易连助手"
-  text: "英文名：EasyConnect SSH；代码：ssh-vpn"
+  text: "EasyConnect SSH"
   tagline: 面向远程运维、企业内网接入与受控开发环境的安全 SSH 隧道工具。
   image:
     src: /logo.png
@@ -39,7 +39,6 @@ features:
     details: 使用标准 SSH 服务快速搭建自管接入节点，无需维护复杂的证书体系。
     icon: 🚀
 ---
-
 <div class="visual-showcase">
 
 ## 🖥️ 视觉体验 (Cross-Platform Experience)
@@ -81,15 +80,19 @@ features:
 ## 🎯 应用场景
 
 ### 🧰 受控开发环境接入
+
 通过保存好的 SSH 配置，安全访问远程开发机、内部制品源和企业工具链。SOCKS5 与 TUN 两种模式分别适合应用级和系统级工作流。
 
 ### 💻 高效的远程办公与运维
+
 通过易连助手（EasyConnect SSH）建立的加密隧道，您可以在授权前提下安全访问公司内部系统、数据库和测试机，并在网络波动时保持较好的连接稳定性。
 
 ### 🛡️ 公共网络下的安全保护
+
 易连助手（EasyConnect SSH）可将敏感业务流量封装在成熟的 SSH 加密连接中，降低在不可信局域网中的被窃听与篡改风险。
 
 ### 🌐 面向各地区的合规使用
+
 易连助手（EasyConnect SSH）面向国际化使用场景，但具体部署和使用应遵守安装地、运营地和使用地适用的法律法规，以及组织内部的安全与合规要求。
 
 </div>

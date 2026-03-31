@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "EasyConnect SSH"
-  text: "Code name: ssh-vpn"
+  text: "ssh-vpn"
   tagline: Secure SSH tunneling for remote administration, internal network access, and protected development workflows.
   image:
     src: /logo.png
@@ -39,7 +39,6 @@ features:
     details: Transparent, open-source under the MIT license. Audit the code and deploy it freely on your own infrastructure.
     icon: 🌍
 ---
-
 <div class="visual-showcase">
 
 ## 🖥️ Cross-Platform Experience
@@ -81,15 +80,19 @@ Whether you are a developer, a sysadmin, or an IT operator, EasyConnect SSH is b
 ## 🎯 Use Cases
 
 ### 🧰 Managed Development Access
+
 Use a saved SSH profile to reach remote development machines, package registries, or internal tooling over an encrypted tunnel. SOCKS5 and TUN modes cover both app-specific and system-level workflows.
 
 ### 💻 Smarter Remote Work
+
 Access internal corporate portals, databases, and staging servers securely. EasyConnect SSH remains suitable for remote administration and field work where network quality can vary.
 
 ### 🛡️ Protected Connections
+
 Wrap sensitive traffic in battle-tested SSH encryption to reduce exposure on untrusted local networks and public hotspots.
 
 ### 🌐 Regional Compliance
+
 EasyConnect SSH is intended for international use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
 
 </div>
