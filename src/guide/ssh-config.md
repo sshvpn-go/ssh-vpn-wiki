@@ -1,7 +1,7 @@
 # Configuration Reference (`profile.json`)
 
-Behind the intuitive Graphical Interface (GUI) lies a highly structured JSON configuration file. 
-Whether you're automating deployments, auditing security parameters, or unlocking advanced routing features, understanding `~/.ssh-vpn/profile.json` is essential for power users.
+Behind the intuitive Graphical Interface (GUI) lies a highly structured JSON configuration file.
+Whether you're automating deployments, auditing security parameters, or configuring remote access behavior, understanding `~/.ssh-vpn/profile.json` is essential for power users.
 
 ## The Config Structure
 
@@ -25,36 +25,36 @@ Determines how the tunnel interfaces with your operating system.
 
 | JSON Key | Type | Description |
 |---|---|---|
-| `mode` | String | `"socks5"` for userspace proxy, or `"tun"` for global VPN take-over. |
-| `socks5_port`| Number | Only applies in `"socks5"` mode. The localhost port to intercept network calls (defaults to `1080`). |
+| `mode` | String | `"socks5"` for a userspace proxy, or `"tun"` for system-level routing through a virtual network adapter. |
+| `socks5_port`| Number | Only applies in `"socks5"` mode. The localhost listening port for proxied applications (defaults to `1080`). |
 | `tun_name` | String | Define a custom name for the virtual card (e.g. `sshvpn0`). Keep empty to auto-assign (`utun*` on mac, `tun0` on Linux). |
 | `tun_ipv4` | String | The virtual IP & Mask assigned by the TUN interface (e.g., `10.0.0.1/24`). |
 | `tun_ipv6` | String | The virtual IPv6 assigning mask (e.g., `fd00::1/64`). |
-| `enable_system_proxy` | Boolean | If `true` under `"socks5"`, automatically overrides OS network settings to pipe all unencrypted traffic. |
+| `enable_system_proxy` | Boolean | If `true` under `"socks5"`, automatically updates OS proxy settings so compatible applications use the local proxy. |
 
-### 3. DNS Leaks & Security (TUN Mode)
-Critical parameters for bypassing DPI and enforcing strict DNS leak protection.
+### 3. DNS & Resolver Settings (TUN Mode)
+Parameters that control DNS behavior when the system uses TUN mode.
 
 | JSON Key | Type | Description |
 |---|---|---|
-| `enable_local_dns` | Boolean | Start a hardened local DNS forwarder hijacking `127.0.0.1:53` natively. |
-| `dns_servers` | Array | Fallback secure DNS upstream servers (e.g., `["8.8.8.8", "1.1.1.1"]`). |
-| `dns_workers` | Number | Concurrent threads to process DNS interceptions (default `0` = auto). |
+| `enable_local_dns` | Boolean | Start a local DNS forwarder on `127.0.0.1:53` so the OS resolver follows the configured tunnel path. |
+| `dns_servers` | Array | Upstream DNS servers to use when local DNS is enabled. |
+| `dns_workers` | Number | Concurrent workers for DNS requests (default `0` = auto). |
 
 ### 4. Smart Routing Engine
-Rules that intelligently split traffic between your direct ISP and your private SSH Node.
+Rules that split traffic between direct local access and the SSH tunnel.
 
 | JSON Key | Type | Description |
 |---|---|---|
 | `enable_rules` | Boolean | Master switch to enable rule-based routing capabilities. |
 | `rules_path` | String | File path linking to a valid rules text map (e.g., `china_rules.txt`). |
-| `bypass_local` | Boolean | Force-whitelist all LAN subnets (`192.168.0.0/16`, `10.0.0.0/8`, etc.), drastically saving proxy bandwidth. |
+| `bypass_local` | Boolean | Keep LAN subnets (`192.168.0.0/16`, `10.0.0.0/8`, etc.) on the local network path instead of sending them through the tunnel. |
 
 ### 5. Advanced Resilience
-These parameters control timeout tolerances for flaky mobile networks and stringent hotel firewalls.
+These parameters control timeout tolerances for unstable mobile, field, or public network conditions.
 
 | JSON Key | Type | Description |
 |---|---|---|
-| `auto_reconnect` | Boolean | Automatically resurrect dead dropped tunnels endlessly. |
+| `auto_reconnect` | Boolean | Automatically reconnect after unexpected tunnel drops. |
 | `connect_timeout`| String | How long to wait for the initial SSH TCP handshake (default `"10s"`). |
-| `keep_alive_interval` | String | Heartbeat pings sent over the tunnel to prevent stateful firewall termination (default `"30s"`). |
+| `keep_alive_interval` | String | Heartbeat interval used to keep long-lived SSH sessions active (default `"30s"`). |

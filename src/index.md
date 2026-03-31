@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "ssh-vpn"
-  text: "The modern, fast, and secure next-generation VPN built on standard SSH."
-  tagline: Bypass firewalls, tunnel your connection, and seamlessly access international networks—designed for both everyday users and developers.
+  text: "A modern, fast, and secure SSH-based remote access client."
+  tagline: Secure SSH tunneling for remote administration, internal network access, and protected development workflows.
   image:
     src: /logo.png
     alt: ssh-vpn Logo
@@ -20,20 +20,20 @@ hero:
       link: https://github.com/xinghui-tech/ssh-vpn-wiki/
 
 features:
-  - title: Next-Gen Security
-    details: Leverages the battle-tested SSH protocol for enterprise-grade encryption. Naturally resists Deep Packet Inspection (DPI) and strict firewalls.
+  - title: Secure SSH Transport
+    details: Leverages the battle-tested SSH protocol to protect traffic between your device and trusted infrastructure with enterprise-grade encryption.
     icon: 🔒
-  - title: Supercharged AI Workflows
-    details: Pair with offshore servers like OpenClaw to reliably access ChatGPT, Claude, and Gemini without connection drops.
+  - title: Reliable Remote Access
+    details: Connect to your own server, a company bastion host, or a managed development environment with a consistent user experience.
     icon: 🤖
   - title: Intuitive GUI Experience
     details: A cross-platform graphical client for Windows, macOS, Linux, and Mobile. Connect in exactly three seconds.
     icon: 📱
-  - title: Advanced Routing Engine
-    details: Choose between a lightweight SOCKS5 proxy or full-traffic TUN mode. Features built-in local bypass (Bypass Local) and custom DNS configurations.
+  - title: Flexible Routing Modes
+    details: Choose between a lightweight SOCKS5 proxy or system-level TUN mode, with local-network exclusions and custom DNS options for managed environments.
     icon: 🧭
   - title: Easy Server Deployment
-    details: Ditch the complex PKI and certificate infrastructure of traditional VPNs. Deploy your own server with a single command.
+    details: Deploy a self-managed SSH access endpoint with a single command, without maintaining a complex certificate stack.
     icon: 🚀
   - title: Open Source & Free
     details: Transparent, open-source under the MIT license. Audit the code and deploy it freely on your own infrastructure.
@@ -65,14 +65,14 @@ From the expansive real estate of a 4K desktop to the portability of a mobile sc
 
 ## 👥 Who is it for?
 
-Whether you are a developer, a sysadmin, or a privacy-conscious user, ssh-vpn is built for you:
+Whether you are a developer, a sysadmin, or an IT operator, ssh-vpn is built for legitimate remote access and internal connectivity scenarios:
 
-- **AI Developers & Researchers**: Pair with OpenClaw servers for stable, high-speed access to ChatGPT, Claude, and Gemini from anywhere.
-- **Global Teams**: Accelerate Git cloning (GitHub/GitLab) and seamlessly manage remote production environments.
-- **Privacy Advocates**: Protect your banking and personal data on public Wi-Fi networks with military-grade SSH tunneling.
-- **QA & Testers**: Easily switch between regional network environments to verify application performance across the globe.
-- **Cross-border E-commerce**: Securely manage global storefronts on Amazon, Shopee, or Lazada with dedicated, localized connection stability.
-- **IT Operations**: Retire bulky and easily-blocked VPN protocols. Enjoy lightweight, high-reliability infrastructure access.
+- **Developers**: Reach internal package mirrors, staging systems, and remote Linux hosts from a single desktop or mobile client.
+- **IT Operations**: Provide staff with a lightweight SSH-based path to bastion hosts, maintenance networks, and operational tooling.
+- **Enterprise Teams**: Protect access to internal portals, databases, and admin consoles when working remotely.
+- **QA & Testers**: Reproduce managed network paths for application validation in development and pre-production environments.
+- **Security-Conscious Users**: Protect traffic on untrusted local networks when connecting to systems you are authorized to use.
+- **Self-Hosted Enthusiasts**: Run the client against infrastructure you control and audit the full stack end to end.
 
 </div>
 
@@ -80,14 +80,17 @@ Whether you are a developer, a sysadmin, or a privacy-conscious user, ssh-vpn is
 
 ## 🎯 Use Cases
 
-### 🤖 Seamless AI Integration
-Easily configure your OpenClaw credentials. Whether you prefer full TUN mode or a lightweight SOCKS5 proxy, ssh-vpn optimizes your AI-assisted development workflow with uncompromised stability.
+### 🧰 Managed Development Access
+Use a saved SSH profile to reach remote development machines, package registries, or internal tooling over an encrypted tunnel. SOCKS5 and TUN modes cover both app-specific and system-level workflows.
 
 ### 💻 Smarter Remote Work
-Access internal corporate portals, databases, and staging servers securely. ssh-vpn's optimized protocol remains stable even during high-latency mobile or satellite connections.
+Access internal corporate portals, databases, and staging servers securely. ssh-vpn remains suitable for remote administration and field work where network quality can vary.
 
-### 🛡️ Secure Communications
-Wrap all your traffic in battle-tested SSH encryption. Defend against Man-in-the-Middle (MITM) attacks and data sniffing on unencrypted public hotspots with ease.
+### 🛡️ Protected Connections
+Wrap sensitive traffic in battle-tested SSH encryption to reduce exposure on untrusted local networks and public hotspots.
+
+### 🌐 Regional Compliance
+ssh-vpn is intended for international use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
 
 </div>
 

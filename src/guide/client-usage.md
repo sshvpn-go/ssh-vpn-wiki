@@ -5,13 +5,13 @@ The ssh-vpn client provides both an intuitive graphical interface (GUI) for ever
 ## Prerequisites
 
 1. Download the correct app bundle for your OS from the **[Downloads Page](/download)**.
-2. Obtain SSH server credentials (from your company, your own VPS, or third-party servers like OpenClaw).
+2. Obtain SSH server credentials from your company, your own infrastructure, or another environment you are authorized to access.
 
 ---
 
 ## Graphical App (Recommended) 🖥️
 
-Whether you are bypassing network restrictions or accessing corporate environments, the GUI app provides an out-of-the-box experience.
+For legitimate remote administration, internal system access, or development workflows, the GUI app provides an out-of-the-box experience.
 
 <div class="device-row" style="margin: 2rem 0;">
   <div class="device-container device-pc">
@@ -28,7 +28,7 @@ Whether you are bypassing network restrictions or accessing corporate environmen
         - **Password**: Type in your server password.
     - **Mode**:
         - **SOCKS5 Proxy**: Creates a lightweight local proxy at `127.0.0.1:1080` (you must configure individual apps like your browser to use this).
-        - **TUN Mode**: Tunnels *all* system traffic seamlessly, just like a traditional VPN.
+        - **TUN Mode**: Routes system traffic through a virtual network adapter for full-device managed connectivity.
 3. **Connect**: Select the profile and tap **Connect**.
 
 <div class="device-row" style="margin: 2rem 0;">
@@ -38,14 +38,14 @@ Whether you are bypassing network restrictions or accessing corporate environmen
 </div>
 
 > **Note on TUN Mode Privileges**
-> TUN mode intercepts system-wide traffic by creating a virtual network adapter. It also takes over DNS resolution (binding to `127.0.0.1:53`) to prevent DNS leaks. **Because of this deep OS integration, using TUN mode requires Administrator/Root privileges on Windows, macOS, and Linux.**
+> TUN mode handles system-wide traffic by creating a virtual network adapter. It can also manage DNS resolution (binding to `127.0.0.1:53`) so the operating system uses the intended resolver path. **Because of this deep OS integration, using TUN mode requires Administrator/Root privileges on Windows, macOS, and Linux.**
 > If you don't have Admin access, use the *SOCKS5 Proxy* mode instead, which runs purely in user-space.
 
 ---
 
 ## Smart Routing & Rules Engine
 
-To minimize latency and seamlessly access both local infrastructure and blocked international networks simultaneously, ssh-vpn features a built-in split routing engine.
+To minimize latency while keeping internal systems and local resources reachable, ssh-vpn includes a built-in split routing engine.
 
 <div class="device-row" style="margin: 2rem 0;">
   <div class="device-container device-pc" style="max-width: 500px;">
@@ -57,8 +57,8 @@ To minimize latency and seamlessly access both local infrastructure and blocked 
 </div>
 
 - **Universal Compatibility**: The rules engine syntax is 100% compatible with mainstream configurations. We organically support `DOMAIN`, `DOMAIN-SUFFIX`, `DOMAIN-KEYWORD`, and `IP-CIDR` rules without conversion.
-- **Easy Imports**: You can import pre-authored rule lists directly into the client. For instance, you can integrate rules to force all Private IPs or specific regional CDNs to connect via `DIRECT` instead of routing through your proxy (`PROXY`), drastically saving SSH bandwidth.
-- **Block Intrusive Trackers**: Beyond bypassing, you can also inject `REJECT` actions to block traffic toward known advertising and telemetry servers.
+- **Easy Imports**: You can import pre-authored rule lists directly into the client. For instance, you can keep all Private IPs or specific internal domains on `DIRECT` while routing authorized remote traffic through the SSH tunnel (`PROXY`).
+- **Block Intrusive Trackers**: You can also inject `REJECT` actions to block traffic toward known advertising and telemetry servers.
 
 ---
 

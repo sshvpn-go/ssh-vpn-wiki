@@ -542,8 +542,8 @@ esac
    AllowTcpForwarding yes
    ```
 
-2. **禁止提权窃取 Shell (首要安全措施) :**
-   强烈推荐限制专用的 VPN 账号（如下方的 `vpnuser`），不赋予终端系统操作权限，仅允许纯粹的转发数据包穿透：
+2. **限制交互式 Shell 权限 (首要安全措施) :**
+   强烈建议为专用账号（如下方的 `vpnuser`）关闭终端登录权限，仅保留必要的转发能力：
    ```ssh
    Match User vpnuser
        AllowTcpForwarding yes
@@ -551,8 +551,8 @@ esac
        ForceCommand /usr/sbin/nologin
    ```
 
-3. **连接防断流调优 (推荐) :**
-   对于长时间保持长连接的 VPN 隧道，配置保活参数以防止被中间路由防火墙因为静默而切断：
+3. **连接保活调优 (推荐) :**
+   对于长时间保持连接的 SSH 隧道，可配置保活参数以减少因中间网络设备空闲超时导致的断连：
    ```ssh
    TCPKeepAlive yes
    ClientAliveInterval 60

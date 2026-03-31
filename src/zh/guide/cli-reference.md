@@ -166,14 +166,14 @@ ssh-vpn-server [参数] [子命令]
 | `GOGC` | `50` | 当未回收的内存增长原来 50% 的时候强制触发大回收（默认标准为 100）。数值越低内存越低，但略微消耗 CPU。 |
 | `GOMAXPROCS` | `1` | 将 Go 微线程调度器锁死在单核架构内。在嵌入式平台上极其有用，砍掉了多核上下文切换的损耗！ |
 
-### SSH 连接防火墙调校
+### SSH 连接参数调优
 
 | 变量 | 默认值 | 说明 |
 |---|---|---|
 | `SSHVPN_SSHD_MAX_DIRECT_GLOBAL` | `2048` | 全局允许并存的 TCP 活跃隧道综合上限。如果是老旧路由器请死死卡在 ~128 左右即可。 |
 | `SSHVPN_SSHD_MAX_DIRECT_PER_CONN` | `64` | **防单用户滥用机制。** 限制同一个授权人能疯狂开启多少个管道。 |
 | `SSHVPN_SSHD_DIAL_TIMEOUT` | `10s` | 发向最终目的地（如下游网站）的网络拨号死等耐心时间。 |
-| `SSHVPN_SSHD_DIAL_KEEPALIVE` | `30s` | 隧道操作系统层面的存活嗅探扫描周期。 |
-| `SSHVPN_SSHD_RELAY_IDLE_TIMEOUT` | `5m` | 修剪枯枝期。若下游某一条转发连接默默无闻长达此时间（没有报文活动），服务端会主动无情砍杀以释放资源。 |
+| `SSHVPN_SSHD_DIAL_KEEPALIVE` | `30s` | SSH 隧道连接保活探测的发送周期。 |
+| `SSHVPN_SSHD_RELAY_IDLE_TIMEOUT` | `5m` | 当某条转发连接在该时长内无报文活动时，服务端会主动关闭它以释放资源。 |
 
-*小提示：在您执行 `ssh-vpn-server service install` 时，程序会自动嗅探以上你提前 `export` 导出的上述优化参数，并永久缝合进后台系统的守护文件里！*
+*小提示：在您执行 `ssh-vpn-server service install` 时，程序会读取以上已 `export` 的优化参数，并将其写入后台守护进程配置。*
