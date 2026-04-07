@@ -17,7 +17,7 @@ hero:
       link: /download
     - theme: alt
       text: View on GitHub
-      link: https://github.com/xinghui-tech/ssh-vpn-wiki/
+      link: https://github.com/sshvpn-go/ssh-vpn-wiki/
 
 features:
   - title: Secure SSH Transport

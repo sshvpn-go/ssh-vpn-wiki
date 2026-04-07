@@ -17,5 +17,5 @@ Use of the software should always comply with applicable local laws, cross-borde
 
 We build openly and welcome peer review to improve security, reliability, and operational clarity.
 
-- **GitHub Repository**: [EasyConnect SSH Docs](https://github.com/xinghui-tech/ssh-vpn-wiki/)
+- **GitHub Repository**: [EasyConnect SSH Docs](https://github.com/sshvpn-go/ssh-vpn-wiki/)
 - **Get Support**: Open GitHub Issues for setup help or new feature requests.

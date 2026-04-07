@@ -42,7 +42,7 @@ export default defineConfig({
           }
         ],
         editLink: {
-          pattern: 'https://github.com/xinghui-tech/ssh-vpn-wiki/edit/main/src/:path',
+          pattern: 'https://github.com/sshvpn-go/ssh-vpn-wiki/edit/main/src/:path',
           text: 'Edit this page'
         }
       }
@@ -73,7 +73,7 @@ export default defineConfig({
           }
         ],
         editLink: {
-          pattern: 'https://github.com/xinghui-tech/ssh-vpn-wiki/edit/main/src/:path',
+          pattern: 'https://github.com/sshvpn-go/ssh-vpn-wiki/edit/main/src/:path',
           text: '编辑此页'
         },
         docFooter: {
@@ -92,7 +92,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png', // 1.2 Uses the custom logo from public directory
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/xinghui-tech/ssh-vpn-wiki' }
+      { icon: 'github', link: 'https://github.com/sshvpn-go/ssh-vpn-wiki' }
     ],
     footer: {
       message: 'Released under the MIT License.',

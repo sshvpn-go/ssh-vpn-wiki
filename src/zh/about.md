@@ -17,5 +17,5 @@
 
 我们以开源方式协作，欢迎社区围绕安全性、可靠性和使用说明持续改进与反馈。
 
-- **GitHub 开源仓库**: [访问 EasyConnect SSH 文档仓库](https://github.com/xinghui-tech/ssh-vpn-wiki/)
-- **提交报告意见**: 获取应用指导、使用排障或新需求开发，请毫无顾忌地[开启新的 Issue](https://github.com/xinghui-tech/ssh-vpn-wiki/issues)。
+- **GitHub 开源仓库**: [访问 EasyConnect SSH 文档仓库](https://github.com/sshvpn-go/ssh-vpn-wiki/)
+- **提交报告意见**: 获取应用指导、使用排障或新需求开发，请毫无顾忌地[开启新的 Issue](https://github.com/sshvpn-go/ssh-vpn-wiki/issues)。

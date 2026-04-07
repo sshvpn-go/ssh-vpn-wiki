@@ -17,7 +17,7 @@ hero:
       link: /zh/download
     - theme: alt
       text: 前往 GitHub
-      link: https://github.com/xinghui-tech/ssh-vpn-wiki/
+      link: https://github.com/sshvpn-go/ssh-vpn-wiki/
 
 features:
   - title: 可靠的 SSH 传输
