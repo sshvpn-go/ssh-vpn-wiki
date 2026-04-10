@@ -93,7 +93,7 @@ Wrap sensitive traffic in battle-tested SSH encryption to reduce exposure on unt
 
 ### 🌐 Regional Compliance
 
-EasyConnect SSH is intended for international use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
+EasyConnect SSH is intended for enterprise use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
 
 </div>
 

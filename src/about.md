@@ -1,6 +1,6 @@
 # Our Mission & Privacy
 
-EasyConnect SSH, code name `ssh-vpn`, was built around a simple goal: provide an auditable SSH-based client for legitimate remote access, internal connectivity, and self-managed infrastructure across international teams and deployment environments.
+EasyConnect SSH, code name `ssh-vpn`, was built around a simple goal: provide an auditable SSH-based client for legitimate remote access, internal connectivity, and self-managed infrastructure across enterprise teams and deployment environments.
 
 ## Clear Ownership and Control
 
