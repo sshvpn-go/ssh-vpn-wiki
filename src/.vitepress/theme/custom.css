@@ -76,10 +76,10 @@
 }
 
 /* ── Pricing page ────────────────────────────────────────────────────
-   Using robust ID selector to beat VitePress defaults during SPA navigation. */
+   Using robust class selector to allow multiple grids on one page. */
 
 /* Break out of VitePress's narrow content max-width so 3 cards fit */
-#ssh-vpn-pricing {
+.pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
@@ -90,26 +90,26 @@
 }
 
 @media (max-width: 1024px) {
-  #ssh-vpn-pricing {
+  .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 720px) {
-  #ssh-vpn-pricing {
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Reset VitePress .vp-doc defaults on all divs inside pricing */
-#ssh-vpn-pricing div {
+.pricing-grid div {
   margin: 0;
   padding: 0;
   border: none;
   line-height: inherit;
 }
 
-#ssh-vpn-pricing .pricing-card {
+.pricing-grid .pricing-card {
   padding: 1rem !important;
   border: 1px solid var(--vp-c-divider) !important;
   border-radius: 16px !important;
@@ -120,13 +120,13 @@
   transition: all 0.3s ease;
 }
 
-#ssh-vpn-pricing .pricing-card:hover {
+.pricing-grid .pricing-card:hover {
   transform: translateY(-8px);
   border-color: var(--vp-c-brand-1) !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-#ssh-vpn-pricing .pricing-card.featured {
+.pricing-grid .pricing-card.featured {
   border: 2px solid var(--vp-c-brand-1) !important;
   background: linear-gradient(135deg,
       var(--vp-c-bg-soft) 0%,
@@ -136,12 +136,12 @@
 }
 
 @media (max-width: 960px) {
-  #ssh-vpn-pricing .pricing-card.featured {
+  .pricing-grid .pricing-card.featured {
     transform: none;
   }
 }
 
-#ssh-vpn-pricing .plan-badge {
+.pricing-grid .plan-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -153,40 +153,40 @@
   font-weight: 700;
 }
 
-#ssh-vpn-pricing .plan-name {
+.pricing-grid .plan-name {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-#ssh-vpn-pricing .plan-price {
+.pricing-grid .plan-price {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--vp-c-brand-1);
   margin-bottom: 0.5rem;
 }
 
-#ssh-vpn-pricing .plan-price .unit {
+.pricing-grid .plan-price .unit {
   font-size: 1rem;
   font-weight: 400;
   color: var(--vp-c-text-2);
 }
 
-#ssh-vpn-pricing .plan-tag {
+.pricing-grid .plan-tag {
   font-size: 0.875rem;
   color: #10b981;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-#ssh-vpn-pricing .plan-desc {
+.pricing-grid .plan-desc {
   font-size: 0.95rem;
   color: var(--vp-c-text-2);
   margin-bottom: 2rem;
   line-height: 1.5;
 }
 
-#ssh-vpn-pricing ul.plan-features {
+.pricing-grid ul.plan-features {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 0 2rem 0 !important;
@@ -194,7 +194,7 @@
   gap: 0rem
 }
 
-#ssh-vpn-pricing .plan-features li {
+.pricing-grid .plan-features li {
   font-size: 0.9rem;
   margin: 0 0 0.75rem 0 !important;
   padding: 0 0 0 1.5rem !important;
@@ -204,7 +204,7 @@
   box-shadow: none !important;
 }
 
-#ssh-vpn-pricing .plan-features li::before {
+.pricing-grid .plan-features li::before {
   content: "✓";
   position: absolute;
   left: 0;
@@ -212,11 +212,11 @@
   font-weight: bold;
 }
 
-#ssh-vpn-pricing .plan-features li p {
+.pricing-grid .plan-features li p {
   margin: 0 !important;
 }
 
-#ssh-vpn-pricing .plan-button {
+.pricing-grid .plan-button {
   text-align: center;
   padding: 0.75rem !important;
   border: 1px solid var(--vp-c-brand-1) !important;
@@ -228,16 +228,16 @@
   background: transparent;
 }
 
-#ssh-vpn-pricing .plan-button:hover {
+.pricing-grid .plan-button:hover {
   background: var(--vp-c-brand-1);
   color: #000;
 }
 
-#ssh-vpn-pricing .plan-button.featured {
+.pricing-grid .plan-button.featured {
   background: var(--vp-c-brand-1) !important;
   color: #000 !important;
 }
 
-#ssh-vpn-pricing .plan-button.featured:hover {
+.pricing-grid .plan-button.featured:hover {
   filter: brightness(1.1);
 }

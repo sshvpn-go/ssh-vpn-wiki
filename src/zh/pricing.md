@@ -3,62 +3,63 @@ outline: false
 aside: false
 ---
 
-# 价格与订阅 (Pricing & Plans)
+# 价格与订阅
 
-易连助手（EasyConnect SSH）开源社区版始终支持 100% 自托管部署。以下方案可视为面向团队用户的可选商业支持与服务包，用于获取持续更新和协助。
+易连助手（EasyConnect SSH）开源社区版始终支持 100% 自托管部署。为满足极客用户与专业团队对高级功能的需求，我们提供以下区域化定价方案。
 
-<div id="ssh-vpn-pricing" class="pricing-container">
+## 软件授权 (Software License)
+*解锁全平台（iOS、Windows、Android、macOS）高级功能与持续更新。*
+
+<div class="pricing-grid" id="ssh-vpn-pricing">
   <!-- Monthly Plan -->
   <div class="pricing-card">
     <div class="plan-name">月度订阅</div>
-    <div class="plan-price">$9.99<span class="unit">/ 月</span></div>
-    <div class="plan-desc">适合短期评估、试点部署或临时项目使用的灵活方案。</div>
+    <div class="plan-price">¥9.9<span class="unit">/ 月</span></div>
+    <div class="plan-desc">适合极客用户短期评估核心协议特性。</div>
     <ul class="plan-features">
       <li>全平台客户端支持</li>
-      <li>智能分流规则引擎</li>
-      <li>托管分发访问</li>
+      <li>支持 3 台设备同时在线</li>
+      <li>所有 SSH 协议特性开启</li>
       <li>优先技术支持</li>
     </ul>
-    <div class="plan-button">立即开始</div>
+    <div class="plan-button">立即开通</div>
   </div>
 
-  <!-- Yearly Plan (Recommended) -->
-  <div class="pricing-card featured">
-    <div class="plan-badge">最受欢迎</div>
+  <!-- Yearly Plan -->
+  <div class="pricing-card">
     <div class="plan-name">年度订阅</div>
-    <div class="plan-price">$49.99<span class="unit">/ 年</span></div>
-    <div class="plan-tag">约 $4.17 / 月 (节省 58%)</div>
-    <div class="plan-desc">适合需要长期更新、部署指导和稳定支持的团队用户。</div>
+    <div class="plan-price">¥49.9<span class="unit">/ 年</span></div>
+    <div class="plan-tag">约合 ¥4.1 / 月</div>
+    <div class="plan-desc">相当于“买5个月送7个月”，适合长期稳定使用的用户。</div>
     <ul class="plan-features">
-      <li><strong>包含月度版所有功能</strong></li>
-      <li>长期版本更新</li>
-      <li>部署指导服务</li>
-      <li>1对1 技术支持</li>
+      <li><strong>包含月度版所有权益</strong></li>
+      <li>支持 5 台设备同时在线</li>
+      <li>版本持续更新与维护</li>
+      <li>更快速的客服响应</li>
     </ul>
-    <div class="plan-button featured">立即省钱</div>
+    <div class="plan-button">年度优惠</div>
   </div>
 
   <!-- Lifetime Plan -->
-  <div class="pricing-card">
-    <div class="plan-name">终身订阅</div>
-    <div class="plan-price">$99.99<span class="unit">/ 次</span></div>
-    <div class="plan-desc">适合希望一次购买、长期使用并持续支持项目的用户。</div>
+  <div class="pricing-card featured">
+    <div class="plan-badge">热门选项</div>
+    <div class="plan-name">终身买断</div>
+    <div class="plan-price">¥99.9<span class="unit">/ 永久</span></div>
+    <div class="plan-desc">一次购买，永久使用。支持未来所有重大版本更新。</div>
     <ul class="plan-features">
-      <li><strong>一次付费，永久使用</strong></li>
-      <li>支持后续所有大版本升级</li>
-      <li>支持者身份标识</li>
-      <li>功能建议优先评估</li>
+      <li><strong>一劳永逸，终身授权</strong></li>
+      <li>解除所有功能使用限制</li>
+      <li>长期支持者身份标识</li>
+      <li>新功能优先评估权</li>
     </ul>
-    <div class="plan-button">永久买断</div>
+    <div class="plan-button featured">永久锁定</div>
   </div>
 </div>
 
 ---
 
 ## 开源自托管 (Self-Hosted)
-如果您拥有自己的基础设施并乐于自托管，您依然可以免费使用易连助手（EasyConnect SSH）：
-- **核心功能**: 100% 免费开源
-- **部署方式**: 遵循 **[服务端指南](/zh/guide/server-usage)** 自行部署
-- **技术支持**: 通过 GitHub Discussions 获取社区支持
-
-
+如果您乐于自建服务，易连助手（EasyConnect SSH）依然支持 100% 免费使用：
+- **核心引擎**: 100% 免费且开源
+- **部署方式**: 遵循 **[服务端使用指南](/zh/guide/server-usage)** 自行部署
+- **合规说明**: 请务必在当地法律允许的范围内使用

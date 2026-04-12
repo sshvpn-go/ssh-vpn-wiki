@@ -5,60 +5,61 @@ aside: false
 
 # Pricing & Subscriptions
 
-EasyConnect SSH remains 100% open-source for self-hosting. The plans below are presented as optional commercial support and service packages for teams that need managed delivery and ongoing assistance.
+EasyConnect SSH remains 100% open-source for self-hosting. For users who prefer a managed experience or professional support, we offer regional pricing plans tailored to your needs.
 
-<div id="ssh-vpn-pricing" class="pricing-container">
+## Software License
+*Core software access and updates across all platforms (iOS, Windows, Android, macOS).*
+
+<div class="pricing-grid" id="ssh-vpn-pricing">
   <!-- Monthly Plan -->
   <div class="pricing-card">
     <div class="plan-name">Monthly</div>
-    <div class="plan-price">$9.99<span class="unit">/ mo</span></div>
-    <div class="plan-desc">A flexible option for short-term evaluation, pilot rollouts, or temporary project needs.</div>
+    <div class="plan-price">$2.99<span class="unit">/ mo</span></div>
+    <div class="plan-desc">Perfect for testing all features on multiple platforms.</div>
     <ul class="plan-features">
-      <li>Cross-platform App Support</li>
-      <li>Smart Routing Engine</li>
-      <li>Managed Distribution Access</li>
-      <li>Priority Support</li>
+      <li>Cross-platform Support</li>
+      <li>3 Simultaneous Devices</li>
+      <li>3 Local Profiles</li>
+      <li>Priority Update Access</li>
     </ul>
     <div class="plan-button">Get Started</div>
   </div>
 
-  <!-- Yearly Plan (Recommended) -->
-  <div class="pricing-card featured">
-    <div class="plan-badge">Most Popular</div>
+  <!-- Yearly Plan -->
+  <div class="pricing-card">
     <div class="plan-name">Yearly</div>
-    <div class="plan-price">$49.99<span class="unit">/ yr</span></div>
-    <div class="plan-tag">~$4.17 / mo (Save 58%)</div>
-    <div class="plan-desc">A balanced plan for teams that need reliable long-term access, updates, and operational assistance.</div>
+    <div class="plan-price">$19.99<span class="unit">/ yr</span></div>
+    <div class="plan-tag">Best Value</div>
+    <div class="plan-desc">A balanced plan for consistent updates and operational assistance.</div>
     <ul class="plan-features">
-      <li><strong>All Monthly Features</strong></li>
-      <li>Long-Term Version Updates</li>
-      <li>Deployment Guidance</li>
-      <li>1-on-1 Technical Support</li>
+      <li><strong>Everything in Monthly</strong></li>
+      <li>5 Simultaneous Devices</li>
+      <li>Unlimited Local Profiles</li>
+      <li>Standard Technical Support</li>
     </ul>
-    <div class="plan-button featured">Save Now</div>
+    <div class="plan-button">Save Now</div>
   </div>
 
   <!-- Lifetime Plan -->
-  <div class="pricing-card">
+  <div class="pricing-card featured">
+    <div class="plan-badge">Hot Option</div>
     <div class="plan-name">Lifetime</div>
-    <div class="plan-price">$99.99<span class="unit">/ once</span></div>
-    <div class="plan-desc">For long-term supporters who prefer a one-time purchase and ongoing access to future releases.</div>
+    <div class="plan-price">$39.99<span class="unit">/ once</span></div>
+    <div class="plan-desc">Pay once, use forever. Includes all future major version upgrades.</div>
     <ul class="plan-features">
       <li><strong>Pay Once, Use Forever</strong></li>
-      <li>All Future Major Upgrades</li>
-      <li>Supporter Recognition</li>
-      <li>Priority Consideration for Feature Requests</li>
+      <li>5 Simultaneous Devices</li>
+      <li>Unlimited Local Profiles</li>
+      <li>Priority for Feature Requests</li>
     </ul>
-    <div class="plan-button">Buy Once</div>
+    <div class="plan-button featured">Buy Once</div>
   </div>
 </div>
 
 ---
 
 ## Open-Source (Self-Hosted)
-If you have your own infrastructure and enjoy self-hosting, EasyConnect SSH is still free:
-- **Core Engine**: 100% Free & Open-Source
-- **Deployment**: Follow the **[Server Guide](/guide/server-usage)** to host it yourself.
-- **Support**: Get help through GitHub Discussions.
-
-
+EasyConnect SSH is still 100% free if you use your own infrastructure:
+- **Core Engine**: Free & Open-Source.
+- **Deployment**: Follow the **[Server Guide](/guide/server-usage)**.
+- **Support**: Available via GitHub Discussions.
