@@ -97,6 +97,10 @@ EasyConnect SSH is intended for enterprise use, but every deployment should foll
 
 </div>
 
+
+<script setup>
+</script>
+
 <style>
 .shadow-section {
   padding: 4rem 2rem;

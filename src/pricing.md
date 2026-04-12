@@ -25,6 +25,21 @@ EasyConnect SSH remains 100% open-source for self-hosting. For users who prefer 
     <div class="plan-button">Get Started</div>
   </div>
 
+  <!-- Lifetime Plan (Featured) -->
+  <div class="pricing-card featured">
+    <div class="plan-badge">Hot Option</div>
+    <div class="plan-name">Lifetime</div>
+    <div class="plan-price">$39.99<span class="unit">/ once</span></div>
+    <div class="plan-desc">Pay once, use forever. Includes all future major version upgrades.</div>
+    <ul class="plan-features">
+      <li><strong>Pay Once, Use Forever</strong></li>
+      <li>5 Simultaneous Devices</li>
+      <li>Unlimited Local Profiles</li>
+      <li>Priority for Feature Requests</li>
+    </ul>
+    <div class="plan-button featured">Buy Once</div>
+  </div>
+
   <!-- Yearly Plan -->
   <div class="pricing-card">
     <div class="plan-name">Yearly</div>
@@ -38,21 +53,6 @@ EasyConnect SSH remains 100% open-source for self-hosting. For users who prefer 
       <li>Standard Technical Support</li>
     </ul>
     <div class="plan-button">Save Now</div>
-  </div>
-
-  <!-- Lifetime Plan -->
-  <div class="pricing-card featured">
-    <div class="plan-badge">Hot Option</div>
-    <div class="plan-name">Lifetime</div>
-    <div class="plan-price">$39.99<span class="unit">/ once</span></div>
-    <div class="plan-desc">Pay once, use forever. Includes all future major version upgrades.</div>
-    <ul class="plan-features">
-      <li><strong>Pay Once, Use Forever</strong></li>
-      <li>5 Simultaneous Devices</li>
-      <li>Unlimited Local Profiles</li>
-      <li>Priority for Feature Requests</li>
-    </ul>
-    <div class="plan-button featured">Buy Once</div>
   </div>
 </div>
 

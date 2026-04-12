@@ -25,6 +25,21 @@ aside: false
     <div class="plan-button">立即开通</div>
   </div>
 
+  <!-- Lifetime Plan (Featured) -->
+  <div class="pricing-card featured">
+    <div class="plan-badge">热门选项</div>
+    <div class="plan-name">终身买断</div>
+    <div class="plan-price">¥99.9<span class="unit">/ 永久</span></div>
+    <div class="plan-desc">一次购买，永久使用。支持未来所有重大版本更新。</div>
+    <ul class="plan-features">
+      <li><strong>一劳永逸，终身授权</strong></li>
+      <li>解除所有功能使用限制</li>
+      <li>长期支持者身份标识</li>
+      <li>新功能优先评估权</li>
+    </ul>
+    <div class="plan-button featured">永久锁定</div>
+  </div>
+
   <!-- Yearly Plan -->
   <div class="pricing-card">
     <div class="plan-name">年度订阅</div>
@@ -38,21 +53,6 @@ aside: false
       <li>更快速的客服响应</li>
     </ul>
     <div class="plan-button">年度优惠</div>
-  </div>
-
-  <!-- Lifetime Plan -->
-  <div class="pricing-card featured">
-    <div class="plan-badge">热门选项</div>
-    <div class="plan-name">终身买断</div>
-    <div class="plan-price">¥99.9<span class="unit">/ 永久</span></div>
-    <div class="plan-desc">一次购买，永久使用。支持未来所有重大版本更新。</div>
-    <ul class="plan-features">
-      <li><strong>一劳永逸，终身授权</strong></li>
-      <li>解除所有功能使用限制</li>
-      <li>长期支持者身份标识</li>
-      <li>新功能优先评估权</li>
-    </ul>
-    <div class="plan-button featured">永久锁定</div>
   </div>
 </div>
 

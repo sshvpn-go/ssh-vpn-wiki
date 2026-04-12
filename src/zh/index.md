@@ -97,6 +97,10 @@ features:
 
 </div>
 
+
+<script setup>
+</script>
+
 <style>
 .shadow-section {
   padding: 4rem 2rem;
