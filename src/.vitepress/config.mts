@@ -28,6 +28,14 @@ export default defineConfig({
           { text: 'Download', link: '/download' },
           { text: 'Guide', link: '/guide/client-usage' },
           { text: 'Pricing', link: '/pricing' },
+          {
+            text: 'Legal',
+            items: [
+              { text: 'Terms of Use', link: '/legal/terms' },
+              { text: 'Privacy Policy', link: '/legal/privacy' },
+              { text: 'Auto-Renewal Service', link: '/legal/subscription' }
+            ]
+          },
           { text: 'About', link: '/about' }
         ],
         sidebar: [
@@ -38,6 +46,14 @@ export default defineConfig({
               { text: 'Server Usage', link: '/guide/server-usage' },
               { text: 'SSH Configuration', link: '/guide/ssh-config' },
               { text: 'CLI Reference', link: '/guide/cli-reference' }
+            ]
+          },
+          {
+            text: 'Legal',
+            items: [
+              { text: 'Terms of Use', link: '/legal/terms' },
+              { text: 'Privacy Policy', link: '/legal/privacy' },
+              { text: 'Auto-Renewal Agreement', link: '/legal/subscription' }
             ]
           }
         ],
@@ -59,6 +75,14 @@ export default defineConfig({
           { text: '下载', link: '/zh/download' },
           { text: '指南', link: '/zh/guide/client-usage' },
           { text: '价格', link: '/zh/pricing' },
+          {
+            text: '法律合规',
+            items: [
+              { text: '使用协议', link: '/zh/legal/terms' },
+              { text: '隐私政策', link: '/zh/legal/privacy' },
+              { text: '自动续费服务协议', link: '/zh/legal/subscription' }
+            ]
+          },
           { text: '关于', link: '/zh/about' }
         ],
         sidebar: [
@@ -69,6 +93,14 @@ export default defineConfig({
               { text: '服务端使用指南', link: '/zh/guide/server-usage' },
               { text: 'SSH 配置指南', link: '/zh/guide/ssh-config' },
               { text: 'CLI 命令行指南', link: '/zh/guide/cli-reference' }
+            ]
+          },
+          {
+            text: '法律合规',
+            items: [
+              { text: '使用协议', link: '/zh/legal/terms' },
+              { text: '隐私政策', link: '/zh/legal/privacy' },
+              { text: '自动续费服务协议', link: '/zh/legal/subscription' }
             ]
           }
         ],
@@ -95,7 +127,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/sshvpn-go/ssh-vpn-wiki' }
     ],
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Released under the MIT License. <a href="/legal/terms">Terms</a> | <a href="/legal/privacy">Privacy</a>',
       copyright: 'Copyright © 2026-present EasyConnect SSH Contributors'
     }
   }
