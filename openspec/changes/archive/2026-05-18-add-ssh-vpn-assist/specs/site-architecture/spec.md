@@ -1,8 +1,5 @@
-# Site Architecture
+## MODIFIED Requirements
 
-## Purpose
-The architectural foundation for the ssh-vpn documentation site using VitePress with multi-language support.
-## Requirements
 ### Requirement: VitePress Foundation
 The site MUST be built using VitePress with a multi-language setup, supporting `en` (default) and `zh` paths, upgraded to support multi-product dynamic navigation and sidebars.
 
@@ -20,4 +17,3 @@ The site architecture MUST include custom interactive Vue components for the lan
 #### Scenario: Viewing the interactive landing page
 - **WHEN** the user visits the root `/` path
 - **THEN** the site displays dynamic product highlights and lets the user toggle or select between Easy Connect SSH and Easy Link Assist.
-

@@ -2,61 +2,69 @@
 layout: home
 
 hero:
-  name: "易连助手"
-  text: "EasyConnect SSH"
-  tagline: 面向远程运维、企业内网接入与受控开发环境的安全 SSH 隧道工具。
+  name: "易连系统 Suite"
+  text: "安全联网与远程协助"
+  tagline: 专业的多平台安全 SSH 隧道联网工具与端到端加密远程技术支持/屏幕控制解决方案。
   image:
     src: /logo.png
-    alt: 易连助手 Logo
+    alt: 易连系统 Logo
   actions:
     - theme: brand
-      text: 快速开始
+      text: 易连助手使用指南
       link: /zh/guide/client-usage
+    - theme: sponsor
+      text: 易连友助使用指南
+      link: /zh/assist/guide
     - theme: alt
-      text: 客户端下载
+      text: 软件下载
       link: /zh/download
-    - theme: alt
-      text: 前往 GitHub
-      link: https://github.com/sshvpn-go/ssh-vpn-wiki/
 
 features:
-  - title: 可靠的 SSH 传输
-    details: 基于久经考验的 SSH 协议，在您的设备与可信服务器之间建立加密通道，满足远程接入与运维场景的安全需求。
+  - title: 可靠的 SSH 加密传输
+    details: 在您的设备与可信服务器之间建立 SSH 隧道，支持轻量 SOCKS5 与系统级 TUN 路由模式。
     icon: 🔒
-  - title: 稳定的连接体验
-    details: 优化的连接建立与重连流程，在桌面端和移动端都能提供稳定、流畅的使用体验。
-    icon: ⚡️
-  - title: 适配开发与运维流程
-    details: 既可以连接公司跳板机、测试环境和内部服务，也适合接入自建 SSH 服务器完成日常开发与维护任务。
-    icon: 🤖
-  - title: 极简客户端与多端同步
-    details: 专为用户打造的跨平台直观图形界面 (Windows/macOS/Linux/Mobile)，三秒完成首次连接。
-    icon: 📱
-  - title: 灵活的路由模式
-    details: 支持轻量 SOCKS5 模式与系统级 TUN 模式，可按需启用本地网络直连与自定义 DNS 配置。
-    icon: 🧭
-  - title: 服务端一键部署
-    details: 使用标准 SSH 服务快速搭建自管接入节点，无需维护复杂的证书体系。
+  - title: 实时屏幕画面共享
+    details: 采用先进的超低延迟画面同步技术，支持自适应分辨率和画质（流畅/清晰/超清）无缝切换。
+    icon: 📺
+  - title: 安全远程指令注入
+    details: 在您的授权下，协助者可通过无障碍或辅助功能模拟点击和滑动，物理级极简退出保障掌控权。
+    icon: 🖱
+  - title: 双开并发运行
+    details: 独立运行的“请求协助”和“协助他人”模块，允许您在共享屏幕的同时远程协助第三人。
+    icon: 🔁
+  - title: 端到端加密 (E2EE)
+    details: 通道基于 TLS 1.3 及 AES-256 位加密设计，中转节点不参与数据帧解密。
+    icon: 🛡️
+  - title: 极简客户端与快速连接
+    details: 支持 Android、iOS、Windows、macOS 和 Linux。一处配置全端同步，实现快速连接。
     icon: 🚀
 ---
+
 <div class="visual-showcase">
 
-## 🖥️ 视觉体验 (Cross-Platform Experience)
+## 📦 易连产品家族 (Our Product Family)
 
-无论是在 4K 桌面显示的宽广视野，还是在手机屏幕上的便捷操作，易连助手（EasyConnect SSH）都能为您提供一致且流畅的交互体验。
+我们提供针对不同业务场景的连接与协助工具，帮助您打破地理与设备的限制。
 
 <div class="device-row">
-  <div class="device-container device-pc">
-    <div class="glow-effect"></div>
-    <img src="../public/images/pc/home.jpg" alt="易连助手桌面端首页">
+  <!-- 易连助手卡片 -->
+  <div class="device-container shadow-section" style="max-width: 420px; padding: 2rem; border: 1px solid var(--vp-c-divider); text-align: left; margin: 0;">
+    <h3 style="margin-top:0; font-size: 1.5rem; color: var(--vp-c-brand-1);">⚡ 易连助手 (Easy Connect SSH)</h3>
+    <p style="font-size: 0.95rem; color: var(--vp-c-text-2); min-height: 80px;">
+      一款跨平台 SSH 图形客户端，面向开发与运维场景。可安全连接内部测试机、代码仓库、堡垒机或自建的 SSH 接入节点。
+    </p>
+    <a href="/zh/guide/client-usage" style="display:inline-block; margin-top: 1rem; color: var(--vp-c-brand-1); font-weight:600;">浏览助手指南 →</a>
   </div>
-  <div class="device-container device-mobile">
-    <div class="glow-effect"></div>
-    <img src="../public/images/mobile/home.jpg" alt="易连助手移动端首页">
+  
+  <!-- 易连友助卡片 -->
+  <div class="device-container shadow-section" style="max-width: 420px; padding: 2rem; border: 1px solid var(--vp-c-divider); text-align: left; margin: 0;">
+    <h3 style="margin-top:0; font-size: 1.5rem; color: var(--vp-c-brand-2);">🛠️ 易连友助 (Easy Link Assist)</h3>
+    <p style="font-size: 0.95rem; color: var(--vp-c-text-2); min-height: 80px;">
+      一款定位于多终端互联的高性能远程技术支持与控制工具。支持高清画面同步、安全辅助服务控制及端到端强加密。
+    </p>
+    <a href="/zh/assist/guide" style="display:inline-block; margin-top: 1rem; color: var(--vp-c-brand-2); font-weight:600;">浏览友助指南 →</a>
   </div>
 </div>
-
-*一处配置，全端同步。享受 SSH 所带来的极简连接魅力。*
 
 </div>
 
@@ -64,39 +72,29 @@ features:
 
 ## 👥 目标人群
 
-无论您是开发者、运维工程师还是企业 IT 管理者，易连助手（EasyConnect SSH）都适用于明确、合规的远程接入场景：
+易连系统服务于多维度场景，无论是极客开发运维，还是非技术的亲友协助，均能游刃有余：
 
-- **开发者**：安全连接内部代码仓库、测试环境、制品仓库和远程 Linux 主机。
-- **IT 运维工程师**：为团队提供到堡垒机、维护网络和运维工具的轻量化 SSH 接入能力。
-- **企业远程办公人员**：在授权前提下访问公司门户、数据库、发布环境和内部后台。
-- **测试与验证团队**：在开发与预发布环境中复现受控网络路径，辅助功能验证与排障。
-- **安全意识较强的用户**：在公共 Wi-Fi 等不可信本地网络中，为已获授权的系统访问增加一层加密保护。
-- **自建基础设施使用者**：配合自有服务器使用，保留对链路和配置的完整可审计性。
+- **开发者与运维团队**：通过 **易连助手** 安全访问开发机、公司内部服务，并能在弱网环境下自动断线重连。
+- **技术支持与客服团队**：通过 **易连友助** 为用户或亲友提供实时的远程系统诊断、配置演示与操作辅导。
+- **家庭亲友日常互助**：子女可以轻松远程接入年迈父母的手机或电脑，指导和演示复杂的移动应用操作。
+- **合规审计高度敏感行业**：所有信道全部基于端到端强加密，并内置物理级“杀手开关”以随时随地掌控设备所有权。
 
 </div>
 
 <div class="content-container shadow-section">
 
-## 🎯 应用场景
+## 🎯 核心优势与合规
 
-### 🧰 受控开发环境接入
+### 💻 快速建立连接
+无论是配置复杂的 SSH 隧道，还是开启屏幕共享会话，图形界面精简流畅，支持便捷保存连接凭证与信任白名单。
 
-通过保存好的 SSH 配置，安全访问远程开发机、内部制品源和企业工具链。SOCKS5 与 TUN 两种模式分别适合应用级和系统级工作流。
+### 🤝 随时中断的物理级“杀手开关”
+在接受协助时，主控端在您屏幕上进行的每一个操作均有半透明视觉轨迹可寻。您只需轻轻摇晃设备或点击悬浮窗，系统会即刻切断物理信道并销毁授权。
 
-### 💻 高效的远程办公与运维
-
-通过易连助手（EasyConnect SSH）建立的加密隧道，您可以在授权前提下安全访问公司内部系统、数据库和测试机，并在网络波动时保持较好的连接稳定性。
-
-### 🛡️ 公共网络下的安全保护
-
-易连助手（EasyConnect SSH）可将敏感业务流量封装在成熟的 SSH 加密连接中，降低在不可信局域网中的被窃听与篡改风险。
-
-### 🌐 面向各地区的合规使用
-
-易连助手（EasyConnect SSH）面向企业使用场景，但具体部署和使用应遵守安装地、运营地和使用地适用的法律法规，以及组织内部的安全与合规要求。
+### 🔒 智能敏感数据自动遮蔽
+安全隐私探测功能，在远程协助过程中，当系统弹出密码输入框、验证码短信、银行卡号或支付界面时，将自动遮蔽画面，防范资金和账户资产泄露。
 
 </div>
-
 
 <script setup>
 </script>
@@ -121,21 +119,7 @@ features:
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.VPHome .content-container ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-.VPHome .content-container li {
-  background: var(--vp-c-bg);
-  padding: 1.5rem;
-  border-radius: 16px;
-  border: 1px solid var(--vp-c-gutter);
-}
 .VPHome .content-container h3 {
-  margin-top: 2rem;
   color: var(--vp-c-brand-1);
 }
 </style>

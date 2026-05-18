@@ -1,8 +1,8 @@
 # Server Deployment Guide
 
-EasyConnect SSH, code name `ssh-vpn`, takes pride in requiring **minimal to no complicated infrastructure configurations**, a striking contrast to heavyweight protocols like OpenVPN or WireGuard.
+Easy Connect SSH, code name `ssh-vpn`, takes pride in requiring **minimal to no complicated infrastructure configurations**, a striking contrast to heavyweight protocols like OpenVPN or WireGuard.
 
-Because EasyConnect SSH inherently leverages the mature SSH protocol, we offer two out-of-the-box deployment solutions depending on your infrastructure.
+Because Easy Connect SSH inherently leverages the mature SSH protocol, we offer two out-of-the-box deployment solutions depending on your infrastructure.
 
 ---
 

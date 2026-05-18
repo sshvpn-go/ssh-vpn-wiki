@@ -1,21 +1,32 @@
 # Our Mission & Privacy
 
-EasyConnect SSH, code name `ssh-vpn`, was built around a simple goal: provide an auditable SSH-based client for legitimate remote access, internal connectivity, and self-managed infrastructure across enterprise teams and deployment environments.
+The **Easy Connect Suite** was built with a unified mission: provide transparent, secure, and highly auditable solutions for remote device connectivity and real-time interactive technical assistance.
 
-## Clear Ownership and Control
+---
 
-Many remote access products depend on opaque hosted gateways or bundled agents. EasyConnect SSH keeps the model straightforward by connecting your device to an SSH server you trust and control.
+## The Easy Connect Family
 
-- **You Control the Endpoint:** EasyConnect SSH communicates directly with an SSH server selected by you or your organization.
-- **Auditable Stack:** The project is open source, so teams can review how traffic is forwarded and how configuration is handled.
-- **Legitimate Use Focus:** The documentation is intended for lawful remote administration, internal system access, and protected development workflows.
-- **Global Compliance Mindset:** Deployments and usage should align with the laws, regulations, licensing conditions, and organizational policies that apply in each region where the software is used.
+We offer two distinct products designed to meet different operational requirements:
 
-Use of the software should always comply with applicable local laws, cross-border data requirements, industry rules, and organizational security policies in the jurisdictions where it is operated.
+1. **Easy Connect SSH** (Code name `ssh-vpn`): An open-source, robust SSH-based client designed for developers, sysadmins, and organizations seeking secure remote server connectivity and internal network tunnels without relying on opaque hosted gateways.
+2. **Easy Link Assist**: A secure remote technical support tool built to break down technical barriers by providing real-time screen sharing and authorized remote screen control for family members, friends, or customer support teams.
+
+---
+
+## Clear Ownership & Auditable Security
+
+Unlike traditional remote access services that route your sensitive data through proprietary networks or bundle un-auditable background agents, our products prioritize total control and security:
+
+- **End-to-End Encryption**: All screen streams, remote controls, and SSH tunnels utilize advanced encryption standards (TLS 1.3 / AES-256 E2EE), leaving zero metadata visible to intermediaries.
+- **Granular Access Control**: Whether setting SSH profiles or granting temporary access keys and Accessibility permissions, the end-user remains the sole decision-maker.
+- **Physical "Kill Switches"**: Easy Link Assist is equipped with physical interruption mechanisms (such as device-shaking or floating orb taps) that immediately close all active communication sockets.
+- **Global Regulatory Alignment**: We design with a rigorous legal framework, ensuring users can configure regional privacy settings to strictly comply with localized cybersecurity, data transfer, and personal information protection laws.
+
+---
 
 ## Contact & Contribute
 
-We build openly and welcome peer review to improve security, reliability, and operational clarity.
+We build openly and welcome peer reviews, technical feedback, and contributions.
 
-- **GitHub Repository**: [EasyConnect SSH Docs](https://github.com/sshvpn-go/ssh-vpn-wiki/)
+- **GitHub Repository**: [Easy Connect Suite Wiki](https://github.com/sshvpn-go/ssh-vpn-wiki/)
 - **Get Support**: Open GitHub Issues for setup help or new feature requests.

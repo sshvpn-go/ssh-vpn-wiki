@@ -2,61 +2,69 @@
 layout: home
 
 hero:
-  name: "EasyConnect SSH"
-  text: "ssh-vpn"
-  tagline: Secure SSH tunneling for remote administration, internal network access, and protected development workflows.
+  name: "Easy Connect Systems"
+  text: "Connectivity Suite"
+  tagline: Professional solutions for secure SSH remote connectivity and real-time remote technical support.
   image:
     src: /logo.png
-    alt: EasyConnect SSH Logo
+    alt: Easy Connect Suite Logo
   actions:
     - theme: brand
-      text: Get Started
+      text: Easy Connect SSH Guide
       link: /guide/client-usage
+    - theme: sponsor
+      text: Easy Link Assist Guide
+      link: /assist/guide
     - theme: alt
-      text: Download Client
+      text: Downloads
       link: /download
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/sshvpn-go/ssh-vpn-wiki/
 
 features:
-  - title: Secure SSH Transport
-    details: Leverages the battle-tested SSH protocol to protect traffic between your device and trusted infrastructure with enterprise-grade encryption.
+  - title: Secure SSH Tunneling
+    details: Protect infrastructure traffic using secure SSH-based TUN or SOCKS5 proxies on Windows, macOS, Linux, and mobile devices.
     icon: 🔒
-  - title: Reliable Remote Access
-    details: Connect to your own server, a company bastion host, or a managed development environment with a consistent user experience.
-    icon: 🤖
-  - title: Intuitive GUI Experience
-    details: A cross-platform graphical client for Windows, macOS, Linux, and Mobile. Connect in exactly three seconds.
-    icon: 📱
-  - title: Flexible Routing Modes
-    details: Choose between a lightweight SOCKS5 proxy or system-level TUN mode, with local-network exclusions and custom DNS options for managed environments.
-    icon: 🧭
-  - title: Easy Server Deployment
-    details: Deploy a self-managed SSH access endpoint with a single command, without maintaining a complex certificate stack.
+  - title: Remote Screen Sharing
+    details: View client devices in real time with high-fps video and auto-adapting resolutions over secure encrypted channels.
+    icon: 📺
+  - title: Direct Remote Control
+    details: Click, swipe, and interact directly on target screens (via Accessibility services) to guide or resolve device issues.
+    icon: 🖱
+  - title: Dual-Role Concurrency
+    details: Unique double-sided mechanism allowing users to concurrently share their screen and control another device.
+    icon: 🔁
+  - title: End-to-End Encryption
+    details: Underpinned by TLS 1.3 and AES-256 to guarantee absolute data security and complete user privacy.
+    icon: 🛡️
+  - title: Clean & Fast Deployments
+    details: Stand up self-managed endpoints with single-command Docker images or use our globally optimized relay nodes.
     icon: 🚀
-  - title: Open Source & Free
-    details: Transparent, open-source under the MIT license. Audit the code and deploy it freely on your own infrastructure.
-    icon: 🌍
 ---
+
 <div class="visual-showcase">
 
-## 🖥️ Cross-Platform Experience
+## 📦 Our Product Family
 
-From the expansive real estate of a 4K desktop to the portability of a mobile screen, EasyConnect SSH provides a consistent and fluid user experience across all your devices.
+Explore our robust tools built to meet your remote connectivity and technical assistance requirements.
 
 <div class="device-row">
-  <div class="device-container device-pc">
-    <div class="glow-effect"></div>
-    <img src="./public/images/pc/home.jpg" alt="EasyConnect SSH Desktop Home">
+  <!-- Product 1 Card -->
+  <div class="device-container shadow-section" style="max-width: 420px; padding: 2rem; border: 1px solid var(--vp-c-divider); text-align: left; margin: 0;">
+    <h3 style="margin-top:0; font-size: 1.5rem; color: var(--vp-c-brand-1);">⚡ Easy Connect SSH</h3>
+    <p style="font-size: 0.95rem; color: var(--vp-c-text-2); min-height: 80px;">
+      A cross-platform SSH client for secure remote administration, corporate bastion host access, and self-hosted secure development pipelines.
+    </p>
+    <a href="/guide/client-usage" style="display:inline-block; margin-top: 1rem; color: var(--vp-c-brand-1); font-weight:600;">Explore SSH Guides →</a>
   </div>
-  <div class="device-container device-mobile">
-    <div class="glow-effect"></div>
-    <img src="./public/images/mobile/home.jpg" alt="EasyConnect SSH Mobile Home">
+  
+  <!-- Product 2 Card -->
+  <div class="device-container shadow-section" style="max-width: 420px; padding: 2rem; border: 1px solid var(--vp-c-divider); text-align: left; margin: 0;">
+    <h3 style="margin-top:0; font-size: 1.5rem; color: var(--vp-c-brand-2);">🛠️ Easy Link Assist</h3>
+    <p style="font-size: 0.95rem; color: var(--vp-c-text-2); min-height: 80px;">
+      An interactive remote support system enabling real-time screen sharing, secure accessibility remote control, and end-to-end encrypted screen streams.
+    </p>
+    <a href="/assist/guide" style="display:inline-block; margin-top: 1rem; color: var(--vp-c-brand-2); font-weight:600;">Explore Remote Assist Guides →</a>
   </div>
 </div>
-
-*One configuration, all devices synced. Experience the simplicity of SSH-based networking.*
 
 </div>
 
@@ -64,14 +72,12 @@ From the expansive real estate of a 4K desktop to the portability of a mobile sc
 
 ## 👥 Who is it for?
 
-Whether you are a developer, a sysadmin, or an IT operator, EasyConnect SSH is built for legitimate remote access and internal connectivity scenarios:
+Our suite serves multiple scenarios across corporate administration, agile development, and interactive peer assistance:
 
-- **Developers**: Reach internal package mirrors, staging systems, and remote Linux hosts from a single desktop or mobile client.
-- **IT Operations**: Provide staff with a lightweight SSH-based path to bastion hosts, maintenance networks, and operational tooling.
-- **Enterprise Teams**: Protect access to internal portals, databases, and admin consoles when working remotely.
-- **QA & Testers**: Reproduce managed network paths for application validation in development and pre-production environments.
-- **Security-Conscious Users**: Protect traffic on untrusted local networks when connecting to systems you are authorized to use.
-- **Self-Hosted Enthusiasts**: Run the client against infrastructure you control and audit the full stack end to end.
+- **Developers & DevOps**: Access internal databases, code repositories, staging servers, and remote bastions securely using **Easy Connect SSH**.
+- **IT Support & Operations**: Remotely diagnose and troubleshoot systems, configure software, or guide clients directly through **Easy Link Assist**.
+- **Family Helpers**: Establish secure connections with relatives or friends to help them navigate complex settings on their mobile or desktop devices.
+- **Security Audit Teams**: Rely on full end-to-end encrypted tunnels (TLS 1.3 / AES-256) and local network exclusions to comply with enterprise standards.
 
 </div>
 
@@ -79,24 +85,16 @@ Whether you are a developer, a sysadmin, or an IT operator, EasyConnect SSH is b
 
 ## 🎯 Use Cases
 
-### 🧰 Managed Development Access
+### 💻 Secure Work-From-Home Tunnels
+Connect to internal company systems, corporate bastions, or cloud staging clusters using saved SSH profiles with a 3-second connection speed.
 
-Use a saved SSH profile to reach remote development machines, package registries, or internal tooling over an encrypted tunnel. SOCKS5 and TUN modes cover both app-specific and system-level workflows.
+### 🤝 Secure Remote Help & Operations
+Help others troubleshoot their devices or receive trusted help remotely. Our physical **"Kill Switch"** (shake device or tap the floating orb) instantly cuts all communication channels for security.
 
-### 💻 Smarter Remote Work
-
-Access internal corporate portals, databases, and staging servers securely. EasyConnect SSH remains suitable for remote administration and field work where network quality can vary.
-
-### 🛡️ Protected Connections
-
-Wrap sensitive traffic in battle-tested SSH encryption to reduce exposure on untrusted local networks and public hotspots.
-
-### 🌐 Regional Compliance
-
-EasyConnect SSH is intended for enterprise use, but every deployment should follow the laws, regulations, and organizational rules that apply in the region where it is installed and operated.
+### 🔒 Sensitive Data Protection
+Enjoy automatic privacy masking: during remote support, our system auto-blurs payment grids, passwords, and sensitive OTP text messages.
 
 </div>
-
 
 <script setup>
 </script>
@@ -121,21 +119,7 @@ EasyConnect SSH is intended for enterprise use, but every deployment should foll
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.VPHome .content-container ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-.VPHome .content-container li {
-  background: var(--vp-c-bg);
-  padding: 1.5rem;
-  border-radius: 16px;
-  border: 1px solid var(--vp-c-gutter);
-}
 .VPHome .content-container h3 {
-  margin-top: 2rem;
   color: var(--vp-c-brand-1);
 }
 </style>

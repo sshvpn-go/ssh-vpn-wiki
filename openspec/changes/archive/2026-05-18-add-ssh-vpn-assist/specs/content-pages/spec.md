@@ -1,8 +1,5 @@
-# Content Pages
+## MODIFIED Requirements
 
-## Purpose
-The primary product documentation content pages, provided in both English and Chinese.
-## Requirements
 ### Requirement: Core Product Pages
 The documentation site MUST include Markdown sources for Home, Download, Client Guide, Server Guide, SSH Config, Pricing, and About Us, as well as the newly added Easy Link Assist Guides and Legal Agreements.
 
@@ -24,4 +21,3 @@ Every core product page, including Easy Link Assist guides and legal agreements,
 #### Scenario: Accessing the Chinese Easy Link Assist Legal Terms
 - **WHEN** the user visits `/zh/legal/terms`
 - **THEN** they see the updated Chinese Terms of Use, fully compatible with both Easy Connect SSH and Easy Link Assist.
-

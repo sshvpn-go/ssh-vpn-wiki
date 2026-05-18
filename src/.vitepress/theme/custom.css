@@ -6,13 +6,25 @@
 }
 
 .VPButton.brand {
-  border-color: var(--vp-button-brand-border);
-  color: var(--vp-button-brand-text);
-  background: linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  border-color: #0066ff !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #00d2ff, #0066ff) !important;
 }
 
 .VPButton.brand:hover {
-  background: linear-gradient(120deg, var(--vp-c-brand-2), var(--vp-c-brand-1));
+  background: linear-gradient(135deg, #0066ff, #00d2ff) !important;
+  text-decoration: none !important;
+}
+
+.VPButton.sponsor {
+  border-color: var(--vp-c-brand-2) !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #ff007f, #bd34fe) !important;
+}
+
+.VPButton.sponsor:hover {
+  background: linear-gradient(135deg, #bd34fe, #ff007f) !important;
+  text-decoration: none !important;
 }
 
 /* Premium Device Presentation Styles */
